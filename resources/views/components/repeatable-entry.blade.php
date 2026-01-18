@@ -68,7 +68,7 @@
 
                             @if (! $clonedEntry->isHidden())
                                 <div @class([
-                                    'shrink-0' => $childEntry instanceof \Accelade\Infolist\Components\ImageEntry,
+                                    'shrink-0' => $childEntry instanceof \Accelade\Infolists\Components\ImageEntry,
                                 ])>
                                     {!! $clonedEntry->toHtml() !!}
                                 </div>
@@ -107,8 +107,8 @@
                                     $clonedEntry = clone $childEntry;
                                     $clonedEntry->record($itemData);
                                     $clonedEntry->hiddenLabel();
-                                    $isImage = $childEntry instanceof \Accelade\Infolist\Components\ImageEntry;
-                                    $isIcon = $childEntry instanceof \Accelade\Infolist\Components\IconEntry;
+                                    $isImage = $childEntry instanceof \Accelade\Infolists\Components\ImageEntry;
+                                    $isIcon = $childEntry instanceof \Accelade\Infolists\Components\IconEntry;
                                     $isColumnFull = $clonedEntry->isColumnSpanFull();
                                 @endphp
 
@@ -136,8 +136,8 @@
                                     $clonedEntry = clone $childEntry;
                                     $clonedEntry->record($itemData);
                                     $clonedEntry->hiddenLabel();
-                                    $isImage = $childEntry instanceof \Accelade\Infolist\Components\ImageEntry;
-                                    $isIcon = $childEntry instanceof \Accelade\Infolist\Components\IconEntry;
+                                    $isImage = $childEntry instanceof \Accelade\Infolists\Components\ImageEntry;
+                                    $isIcon = $childEntry instanceof \Accelade\Infolists\Components\IconEntry;
                                 @endphp
 
                                 @if (! $clonedEntry->isHidden())

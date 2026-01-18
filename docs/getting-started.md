@@ -5,7 +5,7 @@ Accelade Infolist provides a powerful way to display read-only information in a 
 ## Installation
 
 ```bash
-composer require accelade/infolist
+composer require accelade/infolists
 ```
 
 The package auto-registers its service provider via Laravel's package discovery.
@@ -15,8 +15,8 @@ The package auto-registers its service provider via Laravel's package discovery.
 ### Basic Usage
 
 ```php
-use Accelade\Infolist\Infolist;
-use Accelade\Infolist\Components\TextEntry;
+use Accelade\Infolists\Infolist;
+use Accelade\Infolists\Components\TextEntry;
 
 $infolist = Infolist::make()
     ->record($user)
@@ -31,7 +31,7 @@ $infolist = Infolist::make()
 ### Rendering in Blade
 
 ```blade
-<x-infolist::infolist :infolist="$infolist" />
+<x-infolists::infolist :infolist="$infolist" />
 ```
 
 Or render directly:
@@ -98,7 +98,7 @@ Infolist::make()
 Publish the config file:
 
 ```bash
-php artisan vendor:publish --tag=infolist-config
+php artisan vendor:publish --tag=infolists-config
 ```
 
 Key configuration options:

@@ -5,7 +5,7 @@ The ColorEntry component displays color swatches with their hex/rgb values.
 ## Basic Usage
 
 ```php
-use Accelade\Infolist\Components\ColorEntry;
+use Accelade\Infolists\Components\ColorEntry;
 
 ColorEntry::make('brand_color')
     ->label('Brand Color'),
@@ -44,8 +44,8 @@ ColorEntry::make('admin_color')
 ## Complete Example
 
 ```php
-use Accelade\Infolist\Infolist;
-use Accelade\Infolist\Components\ColorEntry;
+use Accelade\Infolists\Infolist;
+use Accelade\Infolists\Components\ColorEntry;
 
 Infolist::make()
     ->record($theme)

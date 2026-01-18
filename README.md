@@ -16,10 +16,10 @@
 Build beautiful, read-only information displays using a Filament-compatible API. Perfect for detail views, dashboards, and anywhere you need to present data elegantly.
 
 ```php
-use Accelade\Infolist\Infolist;
-use Accelade\Infolist\Components\TextEntry;
-use Accelade\Infolist\Components\ImageEntry;
-use Accelade\Infolist\Components\BadgeEntry;
+use Accelade\Infolists\Infolist;
+use Accelade\Infolists\Components\TextEntry;
+use Accelade\Infolists\Components\ImageEntry;
+use Accelade\Infolists\Components\BadgeEntry;
 
 Infolist::make()
     ->record($user)
@@ -53,9 +53,9 @@ composer require accelade/infolists
 Display user information:
 
 ```php
-use Accelade\Infolist\Infolist;
-use Accelade\Infolist\Components\TextEntry;
-use Accelade\Infolist\Components\ImageEntry;
+use Accelade\Infolists\Infolist;
+use Accelade\Infolists\Components\TextEntry;
+use Accelade\Infolists\Components\ImageEntry;
 
 $infolist = Infolist::make()
     ->record($user)
@@ -83,14 +83,14 @@ $infolist = Infolist::make()
 Render in Blade:
 
 ```blade
-<x-infolist::infolist :infolist="$infolist" />
+<x-infolists::infolist :infolist="$infolist" />
 ```
 
 Or use standalone components directly:
 
 ```blade
-<x-infolist::text-entry label="Name" :value="$user->name" />
-<x-infolist::badge-entry label="Status" value="Active" color="success" />
+<x-infolists::text-entry label="Name" :value="$user->name" />
+<x-infolists::badge-entry label="Status" value="Active" color="success" />
 ```
 
 ---
@@ -290,32 +290,32 @@ Infolist::make()
 Use any entry directly in Blade without creating an Infolist:
 
 ```blade
-<x-infolist::text-entry
+<x-infolists::text-entry
     label="Email"
     :value="$user->email"
     icon="heroicon-o-envelope"
 />
 
-<x-infolist::badge-entry
+<x-infolists::badge-entry
     label="Status"
     value="Active"
     color="success"
 />
 
-<x-infolist::image-entry
+<x-infolists::image-entry
     label="Avatar"
     :value="$user->avatar_url"
     :circular="true"
     :size="64"
 />
 
-<x-infolist::rating-entry
+<x-infolists::rating-entry
     label="Score"
     :value="4"
     :max="5"
 />
 
-<x-infolist::markdown-entry
+<x-infolists::markdown-entry
     label="Description"
     :value="$markdownContent"
     :collapsible="true"

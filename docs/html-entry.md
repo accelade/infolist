@@ -5,7 +5,7 @@ The HtmlEntry component displays HTML content or renders Markdown as HTML.
 ## Basic Usage
 
 ```php
-use Accelade\Infolist\Components\HtmlEntry;
+use Accelade\Infolists\Components\HtmlEntry;
 
 HtmlEntry::make('description')
     ->label('Description'),
@@ -82,9 +82,9 @@ HtmlEntry::make('long_content')
 ## Complete Example
 
 ```php
-use Accelade\Infolist\Infolist;
-use Accelade\Infolist\Components\HtmlEntry;
-use Accelade\Infolist\Components\TextEntry;
+use Accelade\Infolists\Infolist;
+use Accelade\Infolists\Components\HtmlEntry;
+use Accelade\Infolists\Components\TextEntry;
 
 Infolist::make()
     ->record($article)

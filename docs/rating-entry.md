@@ -5,7 +5,7 @@ The RatingEntry component displays numeric ratings as visual icons like stars or
 ## Basic Usage
 
 ```php
-use Accelade\Infolist\Components\RatingEntry;
+use Accelade\Infolists\Components\RatingEntry;
 
 RatingEntry::make('rating')
     ->label('Customer Rating'),
@@ -104,9 +104,9 @@ RatingEntry::make('rating')
 ## Complete Example
 
 ```php
-use Accelade\Infolist\Infolist;
-use Accelade\Infolist\Components\RatingEntry;
-use Accelade\Infolist\Components\TextEntry;
+use Accelade\Infolists\Infolist;
+use Accelade\Infolists\Components\RatingEntry;
+use Accelade\Infolists\Components\TextEntry;
 
 Infolist::make()
     ->record($review)

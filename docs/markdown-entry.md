@@ -5,7 +5,7 @@ The MarkdownEntry component renders markdown content with GitHub-flavored markdo
 ## Basic Usage
 
 ```php
-use Accelade\Infolist\Components\MarkdownEntry;
+use Accelade\Infolists\Components\MarkdownEntry;
 
 MarkdownEntry::make('description')
     ->label('Description'),
@@ -63,8 +63,8 @@ MarkdownEntry::make('documentation')
 ## Complete Example
 
 ```php
-use Accelade\Infolist\Infolist;
-use Accelade\Infolist\Components\MarkdownEntry;
+use Accelade\Infolists\Infolist;
+use Accelade\Infolists\Components\MarkdownEntry;
 
 Infolist::make()
     ->record($article)

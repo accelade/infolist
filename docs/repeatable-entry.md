@@ -5,8 +5,8 @@ The RepeatableEntry component displays repeated data items with a nested schema.
 ## Basic Usage
 
 ```php
-use Accelade\Infolist\Components\RepeatableEntry;
-use Accelade\Infolist\Components\TextEntry;
+use Accelade\Infolists\Components\RepeatableEntry;
+use Accelade\Infolists\Components\TextEntry;
 
 RepeatableEntry::make('comments')
     ->schema([
@@ -99,11 +99,11 @@ RepeatableEntry::make('team_members')
 ## Complete Example
 
 ```php
-use Accelade\Infolist\Infolist;
-use Accelade\Infolist\Components\RepeatableEntry;
-use Accelade\Infolist\Components\TextEntry;
-use Accelade\Infolist\Components\ImageEntry;
-use Accelade\Infolist\Components\IconEntry;
+use Accelade\Infolists\Infolist;
+use Accelade\Infolists\Components\RepeatableEntry;
+use Accelade\Infolists\Components\TextEntry;
+use Accelade\Infolists\Components\ImageEntry;
+use Accelade\Infolists\Components\IconEntry;
 
 Infolist::make()
     ->record($project)

@@ -5,7 +5,7 @@ The CodeEntry component displays code snippets with syntax highlighting, line nu
 ## Basic Usage
 
 ```php
-use Accelade\Infolist\Components\CodeEntry;
+use Accelade\Infolists\Components\CodeEntry;
 
 CodeEntry::make('source_code')
     ->label('Source Code'),
@@ -110,8 +110,8 @@ CodeEntry::make('debug_info')
 ## Complete Example
 
 ```php
-use Accelade\Infolist\Infolist;
-use Accelade\Infolist\Components\CodeEntry;
+use Accelade\Infolists\Infolist;
+use Accelade\Infolists\Components\CodeEntry;
 
 Infolist::make()
     ->record($deployment)

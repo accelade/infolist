@@ -5,7 +5,7 @@ The SecretEntry component displays sensitive data that is masked by default and 
 ## Basic Usage
 
 ```php
-use Accelade\Infolist\Components\SecretEntry;
+use Accelade\Infolists\Components\SecretEntry;
 
 SecretEntry::make('api_key')
     ->label('API Key'),
@@ -91,9 +91,9 @@ SecretEntry::make('password')
 ## Complete Example
 
 ```php
-use Accelade\Infolist\Infolist;
-use Accelade\Infolist\Components\SecretEntry;
-use Accelade\Infolist\Components\TextEntry;
+use Accelade\Infolists\Infolist;
+use Accelade\Infolists\Components\SecretEntry;
+use Accelade\Infolists\Components\TextEntry;
 
 Infolist::make()
     ->record($user)

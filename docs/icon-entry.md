@@ -5,7 +5,7 @@ The IconEntry component displays icons, optionally based on boolean values.
 ## Basic Usage
 
 ```php
-use Accelade\Infolist\Components\IconEntry;
+use Accelade\Infolists\Components\IconEntry;
 
 IconEntry::make('status_icon')
     ->label('Status'),
@@ -81,8 +81,8 @@ IconEntry::make('admin_badge')
 ## Complete Example
 
 ```php
-use Accelade\Infolist\Infolist;
-use Accelade\Infolist\Components\IconEntry;
+use Accelade\Infolists\Infolist;
+use Accelade\Infolists\Components\IconEntry;
 
 Infolist::make()
     ->record($user)

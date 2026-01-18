@@ -5,7 +5,7 @@ The ImageEntry component displays single or multiple images with various styling
 ## Basic Usage
 
 ```php
-use Accelade\Infolist\Components\ImageEntry;
+use Accelade\Infolists\Components\ImageEntry;
 
 ImageEntry::make('avatar')
     ->label('Profile Picture'),
@@ -153,8 +153,8 @@ ImageEntry::make('product_image')
 ## Complete Example
 
 ```php
-use Accelade\Infolist\Infolist;
-use Accelade\Infolist\Components\ImageEntry;
+use Accelade\Infolists\Infolist;
+use Accelade\Infolists\Components\ImageEntry;
 
 Infolist::make()
     ->record($team)

@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Infolist Demo', () => {
     test.beforeEach(async ({ page }) => {
-        await page.goto('/docs/infolist-text-entry');
+        await page.goto('/docs/infolists-text-entry');
     });
 
     test('displays text entry demo', async ({ page }) => {
@@ -45,7 +45,7 @@ test.describe('Infolist Demo', () => {
 
 test.describe('Icon Entry Demo', () => {
     test.beforeEach(async ({ page }) => {
-        await page.goto('/docs/infolist-icon-entry');
+        await page.goto('/docs/infolists-icon-entry');
     });
 
     test('displays icon entry demo', async ({ page }) => {
@@ -61,7 +61,7 @@ test.describe('Icon Entry Demo', () => {
 
 test.describe('Image Entry Demo', () => {
     test.beforeEach(async ({ page }) => {
-        await page.goto('/docs/infolist-image-entry');
+        await page.goto('/docs/infolists-image-entry');
     });
 
     test('displays image entry demo', async ({ page }) => {
@@ -90,7 +90,7 @@ test.describe('Image Entry Demo', () => {
 
 test.describe('Color Entry Demo', () => {
     test.beforeEach(async ({ page }) => {
-        await page.goto('/docs/infolist-color-entry');
+        await page.goto('/docs/infolists-color-entry');
     });
 
     test('displays color entry demo', async ({ page }) => {
@@ -112,7 +112,7 @@ test.describe('Color Entry Demo', () => {
 
 test.describe('Key Value Entry Demo', () => {
     test.beforeEach(async ({ page }) => {
-        await page.goto('/docs/infolist-key-value-entry');
+        await page.goto('/docs/infolists-key-value-entry');
     });
 
     test('displays key value entry demo', async ({ page }) => {
@@ -133,7 +133,7 @@ test.describe('Key Value Entry Demo', () => {
 
 test.describe('Repeatable Entry Demo', () => {
     test.beforeEach(async ({ page }) => {
-        await page.goto('/docs/infolist-repeatable-entry');
+        await page.goto('/docs/infolists-repeatable-entry');
     });
 
     test('displays repeatable entry demo', async ({ page }) => {
@@ -157,7 +157,7 @@ test.describe('Repeatable Entry Demo', () => {
 
 test.describe('Infolist Navigation', () => {
     test('can navigate between infolist sections', async ({ page }) => {
-        await page.goto('/docs/infolist-getting-started');
+        await page.goto('/docs/infolists-getting-started');
 
         // Check the page loaded
         await expect(page.locator('body')).toBeVisible();
@@ -166,14 +166,14 @@ test.describe('Infolist Navigation', () => {
         const textEntryLink = page.locator('a:has-text("Text Entry")');
         if (await textEntryLink.isVisible()) {
             await textEntryLink.click();
-            await expect(page).toHaveURL(/infolist-text-entry/);
+            await expect(page).toHaveURL(/infolists-text-entry/);
         }
     });
 });
 
 test.describe('Accessibility', () => {
     test('infolist has proper structure', async ({ page }) => {
-        await page.goto('/docs/infolist-text-entry');
+        await page.goto('/docs/infolists-text-entry');
 
         // Check for semantic structure
         await expect(page.locator('.accelade-infolist')).toBeVisible();

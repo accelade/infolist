@@ -5,7 +5,7 @@ The KeyValueEntry component displays associative arrays as a formatted table.
 ## Basic Usage
 
 ```php
-use Accelade\Infolist\Components\KeyValueEntry;
+use Accelade\Infolists\Components\KeyValueEntry;
 
 KeyValueEntry::make('metadata')
     ->label('Metadata'),
@@ -48,9 +48,9 @@ KeyValueEntry::make('debug_info')
 ## Complete Example
 
 ```php
-use Accelade\Infolist\Infolist;
-use Accelade\Infolist\Components\KeyValueEntry;
-use Accelade\Infolist\Components\TextEntry;
+use Accelade\Infolists\Infolist;
+use Accelade\Infolists\Components\KeyValueEntry;
+use Accelade\Infolists\Components\TextEntry;
 
 Infolist::make()
     ->record($package)

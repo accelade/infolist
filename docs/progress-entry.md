@@ -5,7 +5,7 @@ The ProgressEntry component displays numeric values as progress bars.
 ## Basic Usage
 
 ```php
-use Accelade\Infolist\Components\ProgressEntry;
+use Accelade\Infolists\Components\ProgressEntry;
 
 ProgressEntry::make('completion')
     ->label('Completion'),
@@ -117,9 +117,9 @@ ProgressEntry::make('processing')
 ## Complete Example
 
 ```php
-use Accelade\Infolist\Infolist;
-use Accelade\Infolist\Components\ProgressEntry;
-use Accelade\Infolist\Components\TextEntry;
+use Accelade\Infolists\Infolist;
+use Accelade\Infolists\Components\ProgressEntry;
+use Accelade\Infolists\Components\TextEntry;
 
 Infolist::make()
     ->record($project)

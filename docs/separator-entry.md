@@ -5,7 +5,7 @@ The SeparatorEntry component displays horizontal or vertical divider lines betwe
 ## Basic Usage
 
 ```php
-use Accelade\Infolist\Components\SeparatorEntry;
+use Accelade\Infolists\Components\SeparatorEntry;
 
 SeparatorEntry::make('divider'),
 ```
@@ -106,9 +106,9 @@ SeparatorEntry::make('divider')
 ## Complete Example
 
 ```php
-use Accelade\Infolist\Infolist;
-use Accelade\Infolist\Components\SeparatorEntry;
-use Accelade\Infolist\Components\TextEntry;
+use Accelade\Infolists\Infolist;
+use Accelade\Infolists\Components\SeparatorEntry;
+use Accelade\Infolists\Components\TextEntry;
 
 Infolist::make()
     ->record($user)

@@ -102,7 +102,7 @@ body:
         - Other
 
   - type: input
-    id: infolist-version
+    id: infolists-version
     attributes:
       label: Accelade Infolists Version
       description: What version of Accelade Infolists are you using?

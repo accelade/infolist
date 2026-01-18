@@ -9,8 +9,8 @@ The infolist package provides blade components for easy integration:
 ```blade
 {{-- Create an infolist with QR code entry --}}
 @php
-use Accelade\Infolist\Infolist;
-use Accelade\Infolist\Components\QrCodeEntry;
+use Accelade\Infolists\Infolist;
+use Accelade\Infolists\Components\QrCodeEntry;
 
 $infolist = Infolist::make()
     ->record($data)
@@ -27,7 +27,7 @@ $infolist = Infolist::make()
 ## Basic Usage
 
 ```php
-use Accelade\Infolist\Components\QrCodeEntry;
+use Accelade\Infolists\Components\QrCodeEntry;
 
 QrCodeEntry::make('url')
     ->label('Scan QR Code'),
@@ -128,8 +128,8 @@ QrCodeEntry::make('ticket_code')
 Combine with schema components for layouts:
 
 ```php
-use Accelade\Infolist\Infolist;
-use Accelade\Infolist\Components\QrCodeEntry;
+use Accelade\Infolists\Infolist;
+use Accelade\Infolists\Components\QrCodeEntry;
 use Accelade\Schemas\Components\Grid;
 
 $infolist = Infolist::make()
@@ -147,9 +147,9 @@ $infolist = Infolist::make()
 ## Complete Example
 
 ```php
-use Accelade\Infolist\Infolist;
-use Accelade\Infolist\Components\QrCodeEntry;
-use Accelade\Infolist\Components\TextEntry;
+use Accelade\Infolists\Infolist;
+use Accelade\Infolists\Components\QrCodeEntry;
+use Accelade\Infolists\Components\TextEntry;
 
 Infolist::make()
     ->record($product)

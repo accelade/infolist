@@ -5,7 +5,7 @@ The BadgeEntry component displays values as styled badges with automatic color m
 ## Basic Usage
 
 ```php
-use Accelade\Infolist\Components\BadgeEntry;
+use Accelade\Infolists\Components\BadgeEntry;
 
 BadgeEntry::make('status')
     ->label('Status'),
@@ -100,8 +100,8 @@ BadgeEntry::make('admin_badge')
 ## Complete Example
 
 ```php
-use Accelade\Infolist\Infolist;
-use Accelade\Infolist\Components\BadgeEntry;
+use Accelade\Infolists\Infolist;
+use Accelade\Infolists\Components\BadgeEntry;
 
 Infolist::make()
     ->record($post)

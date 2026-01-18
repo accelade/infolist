@@ -5,7 +5,7 @@ The TextEntry component displays text values with rich formatting options.
 ## Basic Usage
 
 ```php
-use Accelade\Infolist\Components\TextEntry;
+use Accelade\Infolists\Components\TextEntry;
 
 TextEntry::make('name')
     ->label('Full Name'),
