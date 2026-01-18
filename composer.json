@@ -1,25 +1,21 @@
 {
     "name": "accelade/infolist",
     "description": "Infolist package for Laravel - Display read-only information with Filament-compatible API",
-    "keywords": ["laravel", "infolist", "filament", "blade", "components"],
+    "keywords": [
+        "laravel",
+        "infolist",
+        "filament",
+        "blade",
+        "components"
+    ],
     "license": "MIT",
     "type": "library",
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../accelade"
-        },
-        {
-            "type": "path",
-            "url": "../schemas"
-        }
-    ],
     "require": {
         "php": "^8.2",
         "illuminate/support": "^11.0|^12.0",
         "illuminate/view": "^11.0|^12.0",
-        "accelade/accelade": "*",
-        "accelade/schemas": "*",
+        "accelade/accelade": "^v1.0.0",
+        "accelade/schemas": "^v1.0.0",
         "simplesoftwareio/simple-qrcode": "^4.2",
         "picqer/php-barcode-generator": "^3.0"
     },
