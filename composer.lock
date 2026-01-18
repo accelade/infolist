@@ -97,12 +97,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/accelade/schemas.git",
-                "reference": "6c023b872022b58e4c3aea721041e13de1fd6a53"
+                "reference": "b42c32809080b4a81803ee8c4f47629a846d6621"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/accelade/schemas/zipball/6c023b872022b58e4c3aea721041e13de1fd6a53",
-                "reference": "6c023b872022b58e4c3aea721041e13de1fd6a53",
+                "url": "https://api.github.com/repos/accelade/schemas/zipball/b42c32809080b4a81803ee8c4f47629a846d6621",
+                "reference": "b42c32809080b4a81803ee8c4f47629a846d6621",
                 "shasum": ""
             },
             "require": {
@@ -169,7 +169,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-01-18T08:17:46+00:00"
+            "time": "2026-01-18T13:37:45+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
