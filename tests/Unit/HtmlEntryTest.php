@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Accelade\Infolist\Components\HtmlEntry;
+use Accelade\Infolists\Components\HtmlEntry;
 
 it('can create an html entry', function () {
     $entry = HtmlEntry::make('content');

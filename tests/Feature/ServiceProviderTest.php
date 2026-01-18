@@ -2,39 +2,39 @@
 
 declare(strict_types=1);
 
-use Accelade\Infolist\Components\TextEntry;
-use Accelade\Infolist\Infolist;
+use Accelade\Infolists\Components\TextEntry;
+use Accelade\Infolists\Infolist;
 
 describe('Service Provider Registration', function () {
-    it('registers the infolist singleton', function () {
-        expect(app()->bound('infolist'))->toBeTrue();
-        expect(app('infolist'))->toBeInstanceOf(Infolist::class);
+    it('registers the infolists singleton', function () {
+        expect(app()->bound('infolists'))->toBeTrue();
+        expect(app('infolists'))->toBeInstanceOf(Infolist::class);
     });
 
-    it('returns same instance for infolist singleton', function () {
-        $instance1 = app('infolist');
-        $instance2 = app('infolist');
+    it('returns same instance for infolists singleton', function () {
+        $instance1 = app('infolists');
+        $instance2 = app('infolists');
 
         expect($instance1)->toBe($instance2);
     });
 
-    it('loads config from infolist.php', function () {
-        expect(config('infolist'))->toBeArray();
-        expect(config('infolist.placeholder'))->toBe('—');
+    it('loads config from infolists.php', function () {
+        expect(config('infolists'))->toBeArray();
+        expect(config('infolists.placeholder'))->toBe('—');
     });
 });
 
 describe('View Loading', function () {
-    it('loads views from infolist namespace', function () {
+    it('loads views from infolists namespace', function () {
         $hints = app('view')->getFinder()->getHints();
 
-        expect($hints)->toHaveKey('infolist');
+        expect($hints)->toHaveKey('infolists');
     });
 
-    it('can resolve infolist component views', function () {
+    it('can resolve infolists component views', function () {
         $factory = app('view');
 
-        expect($factory->exists('infolist::components.infolist'))->toBeTrue();
+        expect($factory->exists('infolists::components.infolist'))->toBeTrue();
     });
 });
 

@@ -133,7 +133,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Simple progress bar with auto-coloring</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$basicInfolist" />
+            <x-infolists::infolist :infolist="$basicInfolist" />
         </div>
     </div>
 
@@ -144,7 +144,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Colors change based on percentage</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$autoColorInfolist" />
+            <x-infolists::infolist :infolist="$autoColorInfolist" />
         </div>
     </div>
 
@@ -155,7 +155,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Fixed color for progress bars</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$colorsInfolist" />
+            <x-infolists::infolist :infolist="$colorsInfolist" />
         </div>
     </div>
 
@@ -166,7 +166,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Progress bars in various sizes</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$heightsInfolist" />
+            <x-infolists::infolist :infolist="$heightsInfolist" />
         </div>
     </div>
 
@@ -177,7 +177,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Progress bars with stripes and animation</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$stripedInfolist" />
+            <x-infolists::infolist :infolist="$stripedInfolist" />
         </div>
     </div>
 
@@ -188,7 +188,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Custom label format with placeholders</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$labelsInfolist" />
+            <x-infolists::infolist :infolist="$labelsInfolist" />
         </div>
     </div>
 
@@ -199,7 +199,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Progress bar without percentage display</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$noLabelInfolist" />
+            <x-infolists::infolist :infolist="$noLabelInfolist" />
         </div>
     </div>
 
@@ -211,20 +211,20 @@
         </div>
         <div class="p-6">
             <div class="grid grid-cols-1 gap-6 max-w-2xl">
-                <x-infolist::progress-entry
+                <x-infolists::progress-entry
                     label="Download Progress"
                     :value="75"
                     color="primary"
                 />
 
-                <x-infolist::progress-entry
+                <x-infolists::progress-entry
                     label="Upload Progress"
                     :value="45"
                     color="success"
                     :striped="true"
                 />
 
-                <x-infolist::progress-entry
+                <x-infolists::progress-entry
                     label="Processing..."
                     :value="60"
                     color="info"
@@ -233,20 +233,20 @@
             </div>
         </div>
         <div class="p-6 pt-0">
-            <x-accelade::code-block language="blade">&lt;x-infolist::progress-entry
+            <x-accelade::code-block language="blade">&lt;x-infolists::progress-entry
     label="Download Progress"
     :value="75"
     color="primary"
 /&gt;
 
-&lt;x-infolist::progress-entry
+&lt;x-infolists::progress-entry
     label="Upload Progress"
     :value="45"
     color="success"
     :striped="true"
 /&gt;
 
-&lt;x-infolist::progress-entry
+&lt;x-infolists::progress-entry
     label="Processing..."
     :value="60"
     color="info"

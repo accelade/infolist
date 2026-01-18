@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Accelade\Infolist\Concerns;
+namespace Accelade\Infolists\Concerns;
 
 use Closure;
 

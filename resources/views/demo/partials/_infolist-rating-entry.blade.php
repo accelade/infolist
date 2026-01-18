@@ -106,7 +106,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Default 5-star rating display</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$basicInfolist" />
+            <x-infolists::infolist :infolist="$basicInfolist" />
         </div>
     </div>
 
@@ -117,7 +117,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Rating with half-star support for decimal values</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$halfInfolist" />
+            <x-infolists::infolist :infolist="$halfInfolist" />
         </div>
     </div>
 
@@ -128,7 +128,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Rating displayed with heart icons</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$heartsInfolist" />
+            <x-infolists::infolist :infolist="$heartsInfolist" />
         </div>
     </div>
 
@@ -139,7 +139,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">10-star rating scale</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$customMaxInfolist" />
+            <x-infolists::infolist :infolist="$customMaxInfolist" />
         </div>
     </div>
 
@@ -150,7 +150,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Rating icons in various sizes</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$sizesInfolist" />
+            <x-infolists::infolist :infolist="$sizesInfolist" />
         </div>
     </div>
 
@@ -161,7 +161,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Ratings with different color schemes</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$colorsInfolist" />
+            <x-infolists::infolist :infolist="$colorsInfolist" />
         </div>
     </div>
 
@@ -173,20 +173,20 @@
         </div>
         <div class="p-6">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <x-infolist::rating-entry
+                <x-infolists::rating-entry
                     label="Product Rating"
                     :value="4"
                     :max="5"
                 />
 
-                <x-infolist::rating-entry
+                <x-infolists::rating-entry
                     label="Half Stars"
                     :value="3.5"
                     :max="5"
                     :allowHalf="true"
                 />
 
-                <x-infolist::rating-entry
+                <x-infolists::rating-entry
                     label="Custom Size"
                     :value="4"
                     :max="5"
@@ -196,20 +196,20 @@
             </div>
         </div>
         <div class="p-6 pt-0">
-            <x-accelade::code-block language="blade">&lt;x-infolist::rating-entry
+            <x-accelade::code-block language="blade">&lt;x-infolists::rating-entry
     label="Product Rating"
     :value="4"
     :max="5"
 /&gt;
 
-&lt;x-infolist::rating-entry
+&lt;x-infolists::rating-entry
     label="Half Stars"
     :value="3.5"
     :max="5"
     :allowHalf="true"
 /&gt;
 
-&lt;x-infolist::rating-entry
+&lt;x-infolists::rating-entry
     label="Custom Size"
     :value="4"
     :max="5"

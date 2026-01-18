@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Accelade\Infolist\Components;
+namespace Accelade\Infolists\Components;
 
-use Accelade\Infolist\Concerns\CanBeCopied;
-use Accelade\Infolist\Concerns\CanBeHidden;
-use Accelade\Infolist\Concerns\HasBadge;
-use Accelade\Infolist\Concerns\HasColor;
-use Accelade\Infolist\Concerns\HasExtraAttributes;
-use Accelade\Infolist\Concerns\HasIcon;
-use Accelade\Infolist\Concerns\HasLabel;
-use Accelade\Infolist\Concerns\HasState;
-use Accelade\Infolist\Concerns\HasTooltip;
-use Accelade\Infolist\Concerns\HasUrl;
+use Accelade\Infolists\Concerns\CanBeCopied;
+use Accelade\Infolists\Concerns\CanBeHidden;
+use Accelade\Infolists\Concerns\HasBadge;
+use Accelade\Infolists\Concerns\HasColor;
+use Accelade\Infolists\Concerns\HasExtraAttributes;
+use Accelade\Infolists\Concerns\HasIcon;
+use Accelade\Infolists\Concerns\HasLabel;
+use Accelade\Infolists\Concerns\HasState;
+use Accelade\Infolists\Concerns\HasTooltip;
+use Accelade\Infolists\Concerns\HasUrl;
 use Accelade\Schemas\Contracts\HasRecord;
 use Accelade\Schemas\Contracts\Renderable;
 use Closure;

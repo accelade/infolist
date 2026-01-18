@@ -132,7 +132,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Each item wrapped in a contained card</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$commentsInfolist" />
+            <x-infolists::infolist :infolist="$commentsInfolist" />
         </div>
     </div>
 
@@ -143,7 +143,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Display items in a responsive grid</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$teamInfolist" />
+            <x-infolists::infolist :infolist="$teamInfolist" />
         </div>
     </div>
 
@@ -154,7 +154,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Compact inline layout with minimal spacing</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$simpleInfolist" />
+            <x-infolists::infolist :infolist="$simpleInfolist" />
         </div>
     </div>
 
@@ -173,7 +173,7 @@
             ];
             @endphp
 
-            <x-infolist::repeatable-entry
+            <x-infolists::repeatable-entry
                 label="Standalone Repeatable"
                 :items="$standaloneItems"
                 :contained="true"
@@ -182,7 +182,7 @@
                     <span class="font-medium text-gray-900 dark:text-white">Item Name</span>
                     <span class="text-gray-500 dark:text-gray-400">Item Value</span>
                 </div>
-            </x-infolist::repeatable-entry>
+            </x-infolists::repeatable-entry>
         </div>
         <div class="p-6 pt-0">
             <x-accelade::code-block language="blade">@verbatim@php
@@ -192,7 +192,7 @@ $items = [
 ];
 @endphp
 
-<x-infolist::repeatable-entry
+<x-infolists::repeatable-entry
     label="My Items"
     :items="$items"
     :contained="true"
@@ -200,7 +200,7 @@ $items = [
     <div class="flex justify-between">
         <span>Item content</span>
     </div>
-</x-infolist::repeatable-entry>@endverbatim</x-accelade::code-block>
+</x-infolists::repeatable-entry>@endverbatim</x-accelade::code-block>
         </div>
     </div>
 </div>

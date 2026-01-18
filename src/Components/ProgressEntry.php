@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Accelade\Infolist\Components;
+namespace Accelade\Infolists\Components;
 
 use Closure;
 
@@ -219,6 +219,6 @@ class ProgressEntry extends Entry
 
     protected function getViewName(): string
     {
-        return 'infolist::components.progress-entry';
+        return 'infolists::components.progress-entry';
     }
 }

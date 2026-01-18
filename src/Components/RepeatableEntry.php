@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Accelade\Infolist\Components;
+namespace Accelade\Infolists\Components;
 
 class RepeatableEntry extends Entry
 {
@@ -137,6 +137,6 @@ class RepeatableEntry extends Entry
 
     protected function getViewName(): string
     {
-        return 'infolist::components.repeatable-entry';
+        return 'infolists::components.repeatable-entry';
     }
 }

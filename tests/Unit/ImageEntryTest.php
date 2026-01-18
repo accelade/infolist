@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Accelade\Infolist\Components\ImageEntry;
+use Accelade\Infolists\Components\ImageEntry;
 
 it('can create an image entry', function () {
     $entry = ImageEntry::make('avatar');

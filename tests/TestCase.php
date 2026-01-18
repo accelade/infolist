@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Accelade\Infolist\Tests;
+namespace Accelade\Infolists\Tests;
 
-use Accelade\Infolist\InfolistServiceProvider;
+use Accelade\Infolists\InfolistsServiceProvider;
 use Accelade\Schemas\SchemasServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
@@ -14,7 +14,7 @@ class TestCase extends Orchestra
     {
         return [
             SchemasServiceProvider::class,
-            InfolistServiceProvider::class,
+            InfolistsServiceProvider::class,
         ];
     }
 

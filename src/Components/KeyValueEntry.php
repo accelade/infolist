@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Accelade\Infolist\Components;
+namespace Accelade\Infolists\Components;
 
 use Closure;
 
@@ -53,6 +53,6 @@ class KeyValueEntry extends Entry
 
     protected function getViewName(): string
     {
-        return 'infolist::components.key-value-entry';
+        return 'infolists::components.key-value-entry';
     }
 }

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Accelade\Infolist\Components\SeparatorEntry;
+use Accelade\Infolists\Components\SeparatorEntry;
 
 it('can create a separator entry', function () {
     $entry = SeparatorEntry::make('divider');

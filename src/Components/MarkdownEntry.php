@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Accelade\Infolist\Components;
+namespace Accelade\Infolists\Components;
 
 use Closure;
 use League\CommonMark\Environment\Environment;
@@ -115,6 +115,6 @@ class MarkdownEntry extends Entry
 
     protected function getViewName(): string
     {
-        return 'infolist::components.markdown-entry';
+        return 'infolists::components.markdown-entry';
     }
 }

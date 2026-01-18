@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Accelade\Infolist\Components\ColorEntry;
+use Accelade\Infolists\Components\ColorEntry;
 
 it('can create a color entry', function () {
     $entry = ColorEntry::make('primary_color');

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Accelade\Infolist\Components\TextEntry;
+use Accelade\Infolists\Components\TextEntry;
 
 it('can create a text entry', function () {
     $entry = TextEntry::make('name');

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Accelade\Infolist\Components;
+namespace Accelade\Infolists\Components;
 
-use Accelade\Infolist\Concerns\HasConfig;
+use Accelade\Infolists\Concerns\HasConfig;
 use Closure;
 
 class TextEntry extends Entry
@@ -324,6 +324,6 @@ class TextEntry extends Entry
 
     protected function getViewName(): string
     {
-        return 'infolist::components.text-entry';
+        return 'infolists::components.text-entry';
     }
 }

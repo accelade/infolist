@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Accelade\Infolist\Components;
+namespace Accelade\Infolists\Components;
 
 class ColorEntry extends Entry
 {
@@ -21,6 +21,6 @@ class ColorEntry extends Entry
 
     protected function getViewName(): string
     {
-        return 'infolist::components.color-entry';
+        return 'infolists::components.color-entry';
     }
 }

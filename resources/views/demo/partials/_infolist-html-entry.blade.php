@@ -71,7 +71,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Raw HTML rendered directly</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$htmlInfolist" />
+            <x-infolists::infolist :infolist="$htmlInfolist" />
         </div>
     </div>
 
@@ -82,7 +82,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Markdown converted to HTML</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$markdownInfolist" />
+            <x-infolists::infolist :infolist="$markdownInfolist" />
         </div>
     </div>
 
@@ -93,7 +93,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Tailwind Typography styling applied</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$proseInfolist" />
+            <x-infolists::infolist :infolist="$proseInfolist" />
         </div>
     </div>
 
@@ -104,7 +104,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Basic text styling</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$noProseInfolist" />
+            <x-infolists::infolist :infolist="$noProseInfolist" />
         </div>
     </div>
 
@@ -115,7 +115,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Content with max height and scrolling</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$maxHeightInfolist" />
+            <x-infolists::infolist :infolist="$maxHeightInfolist" />
         </div>
     </div>
 
@@ -127,12 +127,12 @@
         </div>
         <div class="p-6">
             <div class="grid grid-cols-1 gap-6">
-                <x-infolist::html-entry
+                <x-infolists::html-entry
                     label="HTML Content"
                     value="<p>This is <strong>formatted</strong> HTML content with <em>styling</em>.</p>"
                 />
 
-                <x-infolist::html-entry
+                <x-infolists::html-entry
                     label="Markdown Content"
                     value="## Hello\n\nThis is **markdown** rendered as HTML."
                     :markdown="true"
@@ -140,12 +140,12 @@
             </div>
         </div>
         <div class="p-6 pt-0">
-            <x-accelade::code-block language="blade">&lt;x-infolist::html-entry
+            <x-accelade::code-block language="blade">&lt;x-infolists::html-entry
     label="HTML Content"
     value="&lt;p&gt;This is &lt;strong&gt;formatted&lt;/strong&gt; HTML.&lt;/p&gt;"
 /&gt;
 
-&lt;x-infolist::html-entry
+&lt;x-infolists::html-entry
     label="Markdown Content"
     value="## Hello\n\nThis is **markdown**."
     :markdown="true"

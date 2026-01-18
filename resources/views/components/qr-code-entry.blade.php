@@ -96,7 +96,7 @@
 @endphp
 
 @if ($hasWrapper && $entry)
-    <x-infolist::entry-wrapper :entry="$entry">
+    <x-infolists::entry-wrapper :entry="$entry">
         @if ($state && $svg)
             <div class="inline-flex flex-col items-center gap-1">
                 @if ($isQr)
@@ -127,7 +127,7 @@
         @else
             <span class="text-gray-400 dark:text-gray-500">{{ $placeholder }}</span>
         @endif
-    </x-infolist::entry-wrapper>
+    </x-infolists::entry-wrapper>
 @else
     {{-- Standalone blade component usage --}}
     <div {{ $attributes->class(['accelade-entry']) }}>

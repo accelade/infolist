@@ -1,9 +1,9 @@
 {
-    "name": "accelade/infolist",
-    "description": "Infolist package for Laravel - Display read-only information with Filament-compatible API",
+    "name": "accelade/infolists",
+    "description": "Infolists package for Laravel - Display read-only information with Filament-compatible API",
     "keywords": [
         "laravel",
-        "infolist",
+        "infolists",
         "filament",
         "blade",
         "components"
@@ -17,7 +17,8 @@
         "accelade/accelade": "^v1.0.0",
         "accelade/schemas": "^v1.0.0",
         "simplesoftwareio/simple-qrcode": "^4.2",
-        "picqer/php-barcode-generator": "^3.0"
+        "picqer/php-barcode-generator": "^3.0",
+        "league/commonmark": "^2.6"
     },
     "require-dev": {
         "orchestra/testbench": "^10.0",
@@ -27,21 +28,21 @@
     },
     "autoload": {
         "psr-4": {
-            "Accelade\\Infolist\\": "src/"
+            "Accelade\\Infolists\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Accelade\\Infolist\\Tests\\": "tests/"
+            "Accelade\\Infolists\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Accelade\\Infolist\\InfolistServiceProvider"
+                "Accelade\\Infolists\\InfolistsServiceProvider"
             ],
             "aliases": {
-                "Infolist": "Accelade\\Infolist\\Facades\\Infolist"
+                "Infolist": "Accelade\\Infolists\\Facades\\Infolist"
             }
         }
     },

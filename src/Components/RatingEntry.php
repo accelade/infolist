@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Accelade\Infolist\Components;
+namespace Accelade\Infolists\Components;
 
 use Closure;
 
@@ -173,6 +173,6 @@ class RatingEntry extends Entry
 
     protected function getViewName(): string
     {
-        return 'infolist::components.rating-entry';
+        return 'infolists::components.rating-entry';
     }
 }

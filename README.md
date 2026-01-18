@@ -1,13 +1,13 @@
-# Accelade Infolist
+# Accelade Infolists
 
 <p align="center">
 <strong>Display read-only information with Filament-compatible API</strong>
 </p>
 
 <p align="center">
-<a href="https://github.com/accelade/infolist/actions/workflows/tests.yml"><img src="https://github.com/accelade/infolist/actions/workflows/tests.yml/badge.svg" alt="Tests"></a>
-<a href="https://packagist.org/packages/accelade/infolist"><img src="https://img.shields.io/packagist/v/accelade/infolist" alt="Latest Version"></a>
-<a href="https://packagist.org/packages/accelade/infolist"><img src="https://img.shields.io/packagist/dt/accelade/infolist" alt="Total Downloads"></a>
+<a href="https://github.com/accelade/infolists/actions/workflows/tests.yml"><img src="https://github.com/accelade/infolists/actions/workflows/tests.yml/badge.svg" alt="Tests"></a>
+<a href="https://packagist.org/packages/accelade/infolists"><img src="https://img.shields.io/packagist/v/accelade/infolists" alt="Latest Version"></a>
+<a href="https://packagist.org/packages/accelade/infolists"><img src="https://img.shields.io/packagist/dt/accelade/infolists" alt="Total Downloads"></a>
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
 </p>
 
@@ -33,7 +33,7 @@ Infolist::make()
 
 ---
 
-## Why Accelade Infolist?
+## Why Accelade Infolists?
 
 - **Filament-Compatible API** — Familiar fluent interface if you've used Filament
 - **15+ Entry Types** — Text, images, badges, icons, colors, QR codes, and more
@@ -47,7 +47,7 @@ Infolist::make()
 ## Quick Start
 
 ```bash
-composer require accelade/infolist
+composer require accelade/infolists
 ```
 
 Display user information:

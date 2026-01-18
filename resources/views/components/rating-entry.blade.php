@@ -67,7 +67,7 @@
 @endphp
 
 @if ($hasWrapper && $entry)
-    <x-infolist::entry-wrapper :entry="$entry">
+    <x-infolists::entry-wrapper :entry="$entry">
         <div class="flex items-center gap-0.5">
             {{-- Filled stars --}}
             @for ($i = 0; $i < $fullStars; $i++)
@@ -110,7 +110,7 @@
                 </span>
             @endif
         </div>
-    </x-infolist::entry-wrapper>
+    </x-infolists::entry-wrapper>
 @else
     {{-- Standalone blade component usage --}}
     <div {{ $attributes->class(['accelade-entry']) }}>

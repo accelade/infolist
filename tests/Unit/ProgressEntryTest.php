@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Accelade\Infolist\Components\ProgressEntry;
+use Accelade\Infolists\Components\ProgressEntry;
 
 it('can create a progress entry', function () {
     $entry = ProgressEntry::make('progress');

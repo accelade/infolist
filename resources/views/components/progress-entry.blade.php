@@ -56,7 +56,7 @@
 @endphp
 
 @if ($hasWrapper && $entry)
-    <x-infolist::entry-wrapper :entry="$entry">
+    <x-infolists::entry-wrapper :entry="$entry">
         <div class="w-full">
             {{-- Progress bar container --}}
             <div class="flex items-center gap-3">
@@ -89,7 +89,7 @@
                 @endif
             </div>
         </div>
-    </x-infolist::entry-wrapper>
+    </x-infolists::entry-wrapper>
 @else
     {{-- Standalone blade component usage --}}
     <div {{ $attributes->class(['accelade-entry']) }}>

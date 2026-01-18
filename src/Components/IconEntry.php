@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Accelade\Infolist\Components;
+namespace Accelade\Infolists\Components;
 
-use Accelade\Infolist\Concerns\HasConfig;
+use Accelade\Infolists\Concerns\HasConfig;
 use Closure;
 
 class IconEntry extends Entry
@@ -140,6 +140,6 @@ class IconEntry extends Entry
 
     protected function getViewName(): string
     {
-        return 'infolist::components.icon-entry';
+        return 'infolists::components.icon-entry';
     }
 }

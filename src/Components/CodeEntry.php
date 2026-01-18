@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Accelade\Infolist\Components;
+namespace Accelade\Infolists\Components;
 
 class CodeEntry extends Entry
 {
@@ -115,6 +115,6 @@ class CodeEntry extends Entry
 
     protected function getViewName(): string
     {
-        return 'infolist::components.code-entry';
+        return 'infolists::components.code-entry';
     }
 }

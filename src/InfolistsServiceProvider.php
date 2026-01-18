@@ -2,39 +2,39 @@
 
 declare(strict_types=1);
 
-namespace Accelade\Infolist;
+namespace Accelade\Infolists;
 
 use Accelade\Accelade;
 use Accelade\Docs\DocsRegistry;
 use Illuminate\Support\ServiceProvider;
 
-class InfolistServiceProvider extends ServiceProvider
+class InfolistsServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/infolist.php', 'infolist');
+        $this->mergeConfigFrom(__DIR__.'/../config/infolists.php', 'infolists');
 
-        $this->app->singleton('infolist', function () {
+        $this->app->singleton('infolists', function () {
             return new Infolist;
         });
     }
 
     public function boot(): void
     {
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'infolist');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'infolists');
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/infolist.php' => config_path('infolist.php'),
-            ], 'infolist-config');
+                __DIR__.'/../config/infolists.php' => config_path('infolists.php'),
+            ], 'infolists-config');
 
             $this->publishes([
-                __DIR__.'/../resources/views' => resource_path('views/vendor/infolist'),
-            ], 'infolist-views');
+                __DIR__.'/../resources/views' => resource_path('views/vendor/infolists'),
+            ], 'infolists-views');
 
             $this->publishes([
-                __DIR__.'/../dist' => public_path('vendor/infolist'),
-            ], 'infolist-assets');
+                __DIR__.'/../dist' => public_path('vendor/infolists'),
+            ], 'infolists-assets');
         }
 
         // Register infolist scripts with Accelade
@@ -57,50 +57,50 @@ class InfolistServiceProvider extends ServiceProvider
         $accelade = $this->app->make('accelade');
 
         // Register CSS styles
-        $accelade->registerStyle('infolist', function () {
+        $accelade->registerStyle('infolists', function () {
             $css = '';
 
             // First try dist CSS
-            $distCssPath = __DIR__.'/../dist/accelade-infolist.css';
+            $distCssPath = __DIR__.'/../dist/accelade-infolists.css';
             if (file_exists($distCssPath)) {
                 $css .= file_get_contents($distCssPath);
             }
 
-            // Also include custom infolist.css if exists
-            $customCssPath = __DIR__.'/../resources/css/infolist.css';
+            // Also include custom infolists.css if exists
+            $customCssPath = __DIR__.'/../resources/css/infolists.css';
             if (file_exists($customCssPath)) {
                 $css .= "\n".file_get_contents($customCssPath);
             }
 
             if ($css) {
-                return "<style data-infolist-styles>\n{$css}\n</style>";
+                return "<style data-infolists-styles>\n{$css}\n</style>";
             }
 
             return '';
         });
 
         // Register JavaScript
-        $accelade->registerScript('infolist', function () {
+        $accelade->registerScript('infolists', function () {
             // First try the built dist file
-            $distPath = __DIR__.'/../dist/infolist.iife.js';
+            $distPath = __DIR__.'/../dist/infolists.iife.js';
             if (file_exists($distPath)) {
                 $js = file_get_contents($distPath);
 
-                return "<script data-infolist-scripts>\n{$js}\n</script>";
+                return "<script data-infolists-scripts>\n{$js}\n</script>";
             }
 
             // Fallback to minimal inline initialization
-            return $this->getInlineInfolistScripts();
+            return $this->getInlineInfolistsScripts();
         });
     }
 
     /**
-     * Get inline infolist initialization scripts.
+     * Get inline infolists initialization scripts.
      */
-    protected function getInlineInfolistScripts(): string
+    protected function getInlineInfolistsScripts(): string
     {
         return <<<'HTML'
-<script data-infolist-scripts>
+<script data-infolists-scripts>
 (function() {
     'use strict';
 
@@ -159,195 +159,195 @@ HTML;
         $docs = $this->app->make('accelade.docs');
 
         // Register package docs path
-        $docs->registerPackage('infolist', __DIR__.'/../docs');
+        $docs->registerPackage('infolists', __DIR__.'/../docs');
 
         // Register navigation group
-        $docs->registerGroup('infolist', 'Infolist', '📋', 40);
+        $docs->registerGroup('infolists', 'Infolists', '📋', 40);
 
         // Register sections
-        $docs->section('infolist-getting-started')
+        $docs->section('infolists-getting-started')
             ->label('Getting Started')
             ->icon('🚀')
             ->markdown('getting-started.md')
-            ->package('infolist')
-            ->description('Introduction to Accelade Infolist')
-            ->keywords(['infolist', 'introduction', 'installation', 'setup'])
-            ->inGroup('infolist')
+            ->package('infolists')
+            ->description('Introduction to Accelade Infolists')
+            ->keywords(['infolists', 'introduction', 'installation', 'setup'])
+            ->inGroup('infolists')
             ->register();
 
-        $docs->section('infolist-text-entry')
+        $docs->section('infolists-text-entry')
             ->label('Text Entry')
             ->icon('📝')
             ->markdown('text-entry.md')
-            ->package('infolist')
+            ->package('infolists')
             ->demo()
             ->description('Display text with formatting options')
             ->keywords(['text', 'entry', 'display', 'format', 'badge', 'copy'])
-            ->inGroup('infolist')
+            ->inGroup('infolists')
             ->register();
 
-        $docs->section('infolist-icon-entry')
+        $docs->section('infolists-icon-entry')
             ->label('Icon Entry')
             ->icon('🎯')
             ->markdown('icon-entry.md')
-            ->package('infolist')
+            ->package('infolists')
             ->demo()
             ->description('Display icons with boolean mode')
             ->keywords(['icon', 'entry', 'boolean', 'status'])
-            ->inGroup('infolist')
+            ->inGroup('infolists')
             ->register();
 
-        $docs->section('infolist-image-entry')
+        $docs->section('infolists-image-entry')
             ->label('Image Entry')
             ->icon('🖼️')
             ->markdown('image-entry.md')
-            ->package('infolist')
+            ->package('infolists')
             ->demo()
             ->description('Display single or multiple images')
             ->keywords(['image', 'entry', 'avatar', 'photo', 'gallery'])
-            ->inGroup('infolist')
+            ->inGroup('infolists')
             ->register();
 
-        $docs->section('infolist-color-entry')
+        $docs->section('infolists-color-entry')
             ->label('Color Entry')
             ->icon('🎨')
             ->markdown('color-entry.md')
-            ->package('infolist')
+            ->package('infolists')
             ->demo()
             ->description('Display color swatches')
             ->keywords(['color', 'entry', 'swatch', 'hex', 'rgb'])
-            ->inGroup('infolist')
+            ->inGroup('infolists')
             ->register();
 
-        $docs->section('infolist-key-value-entry')
+        $docs->section('infolists-key-value-entry')
             ->label('Key Value Entry')
             ->icon('🔑')
             ->markdown('key-value-entry.md')
-            ->package('infolist')
+            ->package('infolists')
             ->demo()
             ->description('Display key-value pairs')
             ->keywords(['key', 'value', 'entry', 'table', 'metadata'])
-            ->inGroup('infolist')
+            ->inGroup('infolists')
             ->register();
 
-        $docs->section('infolist-repeatable-entry')
+        $docs->section('infolists-repeatable-entry')
             ->label('Repeatable Entry')
             ->icon('🔄')
             ->markdown('repeatable-entry.md')
-            ->package('infolist')
+            ->package('infolists')
             ->demo()
             ->description('Display repeated data with nested schema')
             ->keywords(['repeatable', 'entry', 'nested', 'list', 'grid'])
-            ->inGroup('infolist')
+            ->inGroup('infolists')
             ->register();
 
-        $docs->section('infolist-badge-entry')
+        $docs->section('infolists-badge-entry')
             ->label('Badge Entry')
             ->icon('🏷️')
             ->markdown('badge-entry.md')
-            ->package('infolist')
+            ->package('infolists')
             ->demo()
             ->description('Display values as styled badges with color mapping')
             ->keywords(['badge', 'entry', 'status', 'tag', 'label', 'color'])
-            ->inGroup('infolist')
+            ->inGroup('infolists')
             ->register();
 
-        $docs->section('infolist-code-entry')
+        $docs->section('infolists-code-entry')
             ->label('Code Entry')
             ->icon('💻')
             ->markdown('code-entry.md')
-            ->package('infolist')
+            ->package('infolists')
             ->demo()
             ->description('Display code snippets with syntax highlighting')
             ->keywords(['code', 'entry', 'syntax', 'highlight', 'snippet', 'json', 'php'])
-            ->inGroup('infolist')
+            ->inGroup('infolists')
             ->register();
 
-        $docs->section('infolist-qr-code-entry')
+        $docs->section('infolists-qr-code-entry')
             ->label('QR Code Entry')
             ->icon('📱')
             ->markdown('qr-code-entry.md')
-            ->package('infolist')
+            ->package('infolists')
             ->demo()
             ->description('Display QR codes and barcodes')
             ->keywords(['qr', 'code', 'barcode', 'entry', 'scan'])
-            ->inGroup('infolist')
+            ->inGroup('infolists')
             ->register();
 
-        $docs->section('infolist-rating-entry')
+        $docs->section('infolists-rating-entry')
             ->label('Rating Entry')
             ->icon('⭐')
             ->markdown('rating-entry.md')
-            ->package('infolist')
+            ->package('infolists')
             ->demo()
             ->description('Display ratings with stars or hearts')
             ->keywords(['rating', 'star', 'heart', 'score', 'entry'])
-            ->inGroup('infolist')
+            ->inGroup('infolists')
             ->register();
 
-        $docs->section('infolist-separator-entry')
+        $docs->section('infolists-separator-entry')
             ->label('Separator Entry')
             ->icon('➖')
             ->markdown('separator-entry.md')
-            ->package('infolist')
+            ->package('infolists')
             ->demo()
             ->description('Display horizontal or vertical dividers')
             ->keywords(['separator', 'divider', 'hr', 'line', 'entry'])
-            ->inGroup('infolist')
+            ->inGroup('infolists')
             ->register();
 
-        $docs->section('infolist-html-entry')
+        $docs->section('infolists-html-entry')
             ->label('HTML Entry')
             ->icon('📄')
             ->markdown('html-entry.md')
-            ->package('infolist')
+            ->package('infolists')
             ->demo()
             ->description('Display HTML or Markdown content')
             ->keywords(['html', 'markdown', 'content', 'prose', 'entry'])
-            ->inGroup('infolist')
+            ->inGroup('infolists')
             ->register();
 
-        $docs->section('infolist-markdown-entry')
+        $docs->section('infolists-markdown-entry')
             ->label('Markdown Entry')
             ->icon('📝')
             ->markdown('markdown-entry.md')
-            ->package('infolist')
+            ->package('infolists')
             ->demo()
             ->description('Display markdown content with docs-style prose')
             ->keywords(['markdown', 'prose', 'content', 'gfm', 'github', 'entry'])
-            ->inGroup('infolist')
+            ->inGroup('infolists')
             ->register();
 
-        $docs->section('infolist-progress-entry')
+        $docs->section('infolists-progress-entry')
             ->label('Progress Entry')
             ->icon('📊')
             ->markdown('progress-entry.md')
-            ->package('infolist')
+            ->package('infolists')
             ->demo()
             ->description('Display progress bars')
             ->keywords(['progress', 'bar', 'percentage', 'completion', 'entry'])
-            ->inGroup('infolist')
+            ->inGroup('infolists')
             ->register();
 
-        $docs->section('infolist-secret-entry')
+        $docs->section('infolists-secret-entry')
             ->label('Secret Entry')
             ->icon('🔒')
             ->markdown('secret-entry.md')
-            ->package('infolist')
+            ->package('infolists')
             ->demo()
             ->description('Display masked sensitive data')
             ->keywords(['secret', 'password', 'masked', 'hidden', 'entry'])
-            ->inGroup('infolist')
+            ->inGroup('infolists')
             ->register();
 
-        $docs->section('infolist-api-reference')
+        $docs->section('infolists-api-reference')
             ->label('API Reference')
             ->icon('📚')
             ->markdown('api-reference.md')
-            ->package('infolist')
+            ->package('infolists')
             ->description('Complete API documentation')
             ->keywords(['api', 'reference', 'methods', 'options'])
-            ->inGroup('infolist')
+            ->inGroup('infolists')
             ->register();
     }
 }

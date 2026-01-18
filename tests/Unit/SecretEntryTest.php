@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Accelade\Infolist\Components\SecretEntry;
+use Accelade\Infolists\Components\SecretEntry;
 
 it('can create a secret entry', function () {
     $entry = SecretEntry::make('password');

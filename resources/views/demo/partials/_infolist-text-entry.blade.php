@@ -179,7 +179,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Simple text with size and weight options</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$basicInfolist" />
+            <x-infolists::infolist :infolist="$basicInfolist" />
         </div>
     </div>
 
@@ -190,7 +190,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Text displayed as colored badges with ring styling</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$badgeInfolist" />
+            <x-infolists::infolist :infolist="$badgeInfolist" />
         </div>
     </div>
 
@@ -201,7 +201,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Display arrays as badges or bulleted lists</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$listInfolist" />
+            <x-infolists::infolist :infolist="$listInfolist" />
         </div>
     </div>
 
@@ -212,7 +212,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Money, date/time, and relative time formatting</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$formattingInfolist" />
+            <x-infolists::infolist :infolist="$formattingInfolist" />
         </div>
     </div>
 
@@ -223,7 +223,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Display icons before or after text with color options</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$iconsInfolist" />
+            <x-infolists::infolist :infolist="$iconsInfolist" />
         </div>
     </div>
 
@@ -234,7 +234,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Links, copy-to-clipboard, and icons</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$interactiveInfolist" />
+            <x-infolists::infolist :infolist="$interactiveInfolist" />
         </div>
     </div>
 
@@ -246,19 +246,19 @@
         </div>
         <div class="p-6">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <x-infolist::text-entry
+                <x-infolists::text-entry
                     label="Name"
                     value="John Doe"
                 />
 
-                <x-infolist::text-entry
+                <x-infolists::text-entry
                     label="Email"
                     value="john@example.com"
                     icon="heroicon-o-envelope"
                     iconPosition="before"
                 />
 
-                <x-infolist::text-entry
+                <x-infolists::text-entry
                     label="Price"
                     value="$99.00"
                     size="lg"
@@ -268,19 +268,19 @@
             </div>
         </div>
         <div class="p-6 pt-0">
-            <x-accelade::code-block language="blade">&lt;x-infolist::text-entry
+            <x-accelade::code-block language="blade">&lt;x-infolists::text-entry
     label="Name"
     value="John Doe"
 /&gt;
 
-&lt;x-infolist::text-entry
+&lt;x-infolists::text-entry
     label="Email"
     value="john@example.com"
     icon="heroicon-o-envelope"
     iconPosition="before"
 /&gt;
 
-&lt;x-infolist::text-entry
+&lt;x-infolists::text-entry
     label="Price"
     value="$99.00"
     size="lg"

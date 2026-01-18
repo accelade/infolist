@@ -108,7 +108,7 @@
 @endphp
 
 @if ($hasWrapper && $entry)
-    <x-infolist::entry-wrapper :entry="$entry">
+    <x-infolists::entry-wrapper :entry="$entry">
         @if ($displayValue === null || $displayValue === '')
             <span class="text-gray-400 dark:text-gray-500 {{ $sizeClasses }}">
                 {{ $placeholder }}
@@ -126,7 +126,7 @@
                             $weightClasses,
                             $entry->getColorClasses($color),
                         ])>
-                            @include('infolist::components.partials.text-value', [
+                            @include('infolists::components.partials.text-value', [
                                 'value' => $value,
                                 'entry' => $entry,
                             ])
@@ -141,7 +141,7 @@
                             $weightClasses,
                             $entry->getColorClasses($color),
                         ])>
-                            @include('infolist::components.partials.text-value', [
+                            @include('infolists::components.partials.text-value', [
                                 'value' => $value,
                                 'entry' => $entry,
                             ])
@@ -229,7 +229,7 @@
                 </div>
             @endif
         @endif
-    </x-infolist::entry-wrapper>
+    </x-infolists::entry-wrapper>
 @else
     {{-- Standalone blade component usage --}}
     <div {{ $attributes->class(['accelade-entry']) }}>

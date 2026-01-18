@@ -44,7 +44,7 @@
 @endphp
 
 @if ($hasWrapper && $entry)
-<x-infolist::entry-wrapper :entry="$entry">
+<x-infolists::entry-wrapper :entry="$entry">
     @if (count($items) > 0)
         <div
             @class([
@@ -159,7 +159,7 @@
             {{ $placeholder }}
         </span>
     @endif
-</x-infolist::entry-wrapper>
+</x-infolists::entry-wrapper>
 @else
     {{-- Standalone blade component usage with slot --}}
     <div {{ $attributes->class(['accelade-entry']) }}>

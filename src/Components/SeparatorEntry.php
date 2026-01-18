@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Accelade\Infolist\Components;
+namespace Accelade\Infolists\Components;
 
 use Closure;
 
@@ -212,6 +212,6 @@ class SeparatorEntry extends Entry
 
     protected function getViewName(): string
     {
-        return 'infolist::components.separator-entry';
+        return 'infolists::components.separator-entry';
     }
 }

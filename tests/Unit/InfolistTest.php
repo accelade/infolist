@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use Accelade\Infolist\Components\TextEntry;
-use Accelade\Infolist\Infolist;
+use Accelade\Infolists\Components\TextEntry;
+use Accelade\Infolists\Infolist;
 
 it('can create an infolist', function () {
     $infolist = Infolist::make();

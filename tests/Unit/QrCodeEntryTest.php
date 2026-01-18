@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Accelade\Infolist\Components\QrCodeEntry;
+use Accelade\Infolists\Components\QrCodeEntry;
 
 it('can create a qr code entry', function () {
     $entry = QrCodeEntry::make('code');

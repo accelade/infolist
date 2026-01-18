@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Accelade\Infolist\Components\KeyValueEntry;
+use Accelade\Infolists\Components\KeyValueEntry;
 
 it('can create a key value entry', function () {
     $entry = KeyValueEntry::make('metadata');

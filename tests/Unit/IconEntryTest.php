@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Accelade\Infolist\Components\IconEntry;
+use Accelade\Infolists\Components\IconEntry;
 
 it('can create an icon entry', function () {
     $entry = IconEntry::make('status');

@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use Accelade\Infolist\Components\RepeatableEntry;
-use Accelade\Infolist\Components\TextEntry;
+use Accelade\Infolists\Components\RepeatableEntry;
+use Accelade\Infolists\Components\TextEntry;
 
 it('can create a repeatable entry', function () {
     $entry = RepeatableEntry::make('comments');

@@ -48,7 +48,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Display and copy color values with preview swatches</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$infolist" />
+            <x-infolists::infolist :infolist="$infolist" />
         </div>
     </div>
 
@@ -60,38 +60,38 @@
         </div>
         <div class="p-6">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <x-infolist::color-entry
+                <x-infolists::color-entry
                     label="Brand Color"
                     value="#3B82F6"
                     :copyable="true"
                 />
 
-                <x-infolist::color-entry
+                <x-infolists::color-entry
                     label="Accent Color"
                     value="#10B981"
                     :copyable="true"
                 />
 
-                <x-infolist::color-entry
+                <x-infolists::color-entry
                     label="Warning Color"
                     value="#F59E0B"
                 />
             </div>
         </div>
         <div class="p-6 pt-0">
-            <x-accelade::code-block language="blade">&lt;x-infolist::color-entry
+            <x-accelade::code-block language="blade">&lt;x-infolists::color-entry
     label="Brand Color"
     value="#3B82F6"
     :copyable="true"
 /&gt;
 
-&lt;x-infolist::color-entry
+&lt;x-infolists::color-entry
     label="Accent Color"
     value="#10B981"
     :copyable="true"
 /&gt;
 
-&lt;x-infolist::color-entry
+&lt;x-infolists::color-entry
     label="Warning Color"
     value="#F59E0B"
 /&gt;</x-accelade::code-block>

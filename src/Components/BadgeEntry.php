@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Accelade\Infolist\Components;
+namespace Accelade\Infolists\Components;
 
 class BadgeEntry extends Entry
 {
@@ -97,6 +97,6 @@ class BadgeEntry extends Entry
 
     protected function getViewName(): string
     {
-        return 'infolist::components.badge-entry';
+        return 'infolists::components.badge-entry';
     }
 }

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Accelade\Infolist;
+namespace Accelade\Infolists;
 
-use Accelade\Infolist\Components\Entry;
-use Accelade\Infolist\Concerns\HasConfig;
+use Accelade\Infolists\Components\Entry;
+use Accelade\Infolists\Concerns\HasConfig;
 use Accelade\Schemas\Contracts\HasRecord;
 use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Contracts\View\View;
@@ -156,7 +156,7 @@ class Infolist implements Htmlable
 
     public function render(): View
     {
-        return view('infolist::components.infolist', [
+        return view('infolists::components.infolist', [
             'infolist' => $this,
         ]);
     }

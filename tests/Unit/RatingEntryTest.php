@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Accelade\Infolist\Components\RatingEntry;
+use Accelade\Infolists\Components\RatingEntry;
 
 it('can create a rating entry', function () {
     $entry = RatingEntry::make('rating');

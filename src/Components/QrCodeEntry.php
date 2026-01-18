@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Accelade\Infolist\Components;
+namespace Accelade\Infolists\Components;
 
 use BaconQrCode\Renderer\Image\SvgImageBackEnd;
 use BaconQrCode\Renderer\ImageRenderer;
@@ -311,6 +311,6 @@ class QrCodeEntry extends Entry
 
     protected function getViewName(): string
     {
-        return 'infolist::components.qr-code-entry';
+        return 'infolists::components.qr-code-entry';
     }
 }

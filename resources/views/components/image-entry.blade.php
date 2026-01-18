@@ -106,7 +106,7 @@
 @endphp
 
 @if ($hasWrapper && $entry)
-    <x-infolist::entry-wrapper :entry="$entry">
+    <x-infolists::entry-wrapper :entry="$entry">
         @if (empty($images))
             <span style="color: var(--docs-text-muted, #64748b);">
                 {{ $placeholder }}
@@ -200,7 +200,7 @@
                 @endif
             </div>
         @endif
-    </x-infolist::entry-wrapper>
+    </x-infolists::entry-wrapper>
 @else
     {{-- Standalone blade component usage --}}
     <div {{ $attributes->class(['accelade-entry']) }}>

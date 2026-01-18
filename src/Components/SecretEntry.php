@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Accelade\Infolist\Components;
+namespace Accelade\Infolists\Components;
 
 use Closure;
 
@@ -166,6 +166,6 @@ class SecretEntry extends Entry
 
     protected function getViewName(): string
     {
-        return 'infolist::components.secret-entry';
+        return 'infolists::components.secret-entry';
     }
 }

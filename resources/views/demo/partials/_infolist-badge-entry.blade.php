@@ -140,7 +140,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Automatically color badges based on state values</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$colorMappingInfolist" />
+            <x-infolists::infolist :infolist="$colorMappingInfolist" />
         </div>
     </div>
 
@@ -151,7 +151,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Display true/false values with custom labels and colors</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$booleanInfolist" />
+            <x-infolists::infolist :infolist="$booleanInfolist" />
         </div>
     </div>
 
@@ -162,7 +162,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Add icons before or after badge text</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$withIconsInfolist" />
+            <x-infolists::infolist :infolist="$withIconsInfolist" />
         </div>
     </div>
 
@@ -173,7 +173,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Filament-style badge colors with ring styling</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$colorsInfolist" />
+            <x-infolists::infolist :infolist="$colorsInfolist" />
         </div>
     </div>
 
@@ -185,20 +185,20 @@
         </div>
         <div class="p-6">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <x-infolist::badge-entry
+                <x-infolists::badge-entry
                     label="Status"
                     value="Published"
                     color="success"
                 />
 
-                <x-infolist::badge-entry
+                <x-infolists::badge-entry
                     label="Priority"
                     value="High"
                     color="danger"
                     icon="heroicon-o-exclamation-triangle"
                 />
 
-                <x-infolist::badge-entry
+                <x-infolists::badge-entry
                     label="Category"
                     value="Technology"
                     color="info"
@@ -208,20 +208,20 @@
             </div>
         </div>
         <div class="p-6 pt-0">
-            <x-accelade::code-block language="blade">&lt;x-infolist::badge-entry
+            <x-accelade::code-block language="blade">&lt;x-infolists::badge-entry
     label="Status"
     value="Published"
     color="success"
 /&gt;
 
-&lt;x-infolist::badge-entry
+&lt;x-infolists::badge-entry
     label="Priority"
     value="High"
     color="danger"
     icon="heroicon-o-exclamation-triangle"
 /&gt;
 
-&lt;x-infolist::badge-entry
+&lt;x-infolists::badge-entry
     label="Category"
     value="Technology"
     color="info"

@@ -53,7 +53,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Boolean icons, dynamic colors, and sizes</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$infolist" />
+            <x-infolists::infolist :infolist="$infolist" />
         </div>
     </div>
 
@@ -65,26 +65,26 @@
         </div>
         <div class="p-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <x-infolist::icon-entry
+                <x-infolists::icon-entry
                     label="Verified"
                     :value="true"
                     :boolean="true"
                 />
 
-                <x-infolist::icon-entry
+                <x-infolists::icon-entry
                     label="Not Verified"
                     :value="false"
                     :boolean="true"
                 />
 
-                <x-infolist::icon-entry
+                <x-infolists::icon-entry
                     label="Admin Role"
                     icon="heroicon-o-shield-check"
                     color="danger"
                     size="lg"
                 />
 
-                <x-infolist::icon-entry
+                <x-infolists::icon-entry
                     label="Online Status"
                     icon="heroicon-o-signal"
                     color="success"
@@ -94,20 +94,20 @@
             </div>
         </div>
         <div class="p-6 pt-0">
-            <x-accelade::code-block language="blade">&lt;x-infolist::icon-entry
+            <x-accelade::code-block language="blade">&lt;x-infolists::icon-entry
     label="Verified"
     :value="true"
     :boolean="true"
 /&gt;
 
-&lt;x-infolist::icon-entry
+&lt;x-infolists::icon-entry
     label="Admin Role"
     icon="heroicon-o-shield-check"
     color="danger"
     size="lg"
 /&gt;
 
-&lt;x-infolist::icon-entry
+&lt;x-infolists::icon-entry
     label="Online Status"
     icon="heroicon-o-signal"
     color="success"

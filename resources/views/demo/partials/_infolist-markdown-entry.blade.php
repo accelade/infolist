@@ -208,7 +208,7 @@ MD;
             <p class="mt-1 text-sm" style="color: var(--docs-text-muted, #64748b);">Bold, italic, links, and inline code</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$basicInfolist" />
+            <x-infolists::infolist :infolist="$basicInfolist" />
         </div>
     </div>
 
@@ -219,7 +219,7 @@ MD;
             <p class="mt-1 text-sm" style="color: var(--docs-text-muted, #64748b);">All six heading levels with proper styling</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$headingsInfolist" />
+            <x-infolists::infolist :infolist="$headingsInfolist" />
         </div>
     </div>
 
@@ -230,7 +230,7 @@ MD;
             <p class="mt-1 text-sm" style="color: var(--docs-text-muted, #64748b);">Ordered, unordered, nested, and task lists</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$listsInfolist" />
+            <x-infolists::infolist :infolist="$listsInfolist" />
         </div>
     </div>
 
@@ -241,7 +241,7 @@ MD;
             <p class="mt-1 text-sm" style="color: var(--docs-text-muted, #64748b);">Inline code and fenced code blocks</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$codeInfolist" />
+            <x-infolists::infolist :infolist="$codeInfolist" />
         </div>
     </div>
 
@@ -252,7 +252,7 @@ MD;
             <p class="mt-1 text-sm" style="color: var(--docs-text-muted, #64748b);">GitHub-flavored markdown tables with zebra striping</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$tableInfolist" />
+            <x-infolists::infolist :infolist="$tableInfolist" />
         </div>
     </div>
 
@@ -263,7 +263,7 @@ MD;
             <p class="mt-1 text-sm" style="color: var(--docs-text-muted, #64748b);">Blockquotes and horizontal rules</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$blockquoteInfolist" />
+            <x-infolists::infolist :infolist="$blockquoteInfolist" />
         </div>
     </div>
 
@@ -274,7 +274,7 @@ MD;
             <p class="mt-1 text-sm" style="color: var(--docs-text-muted, #64748b);">Long content with max-height and scrolling</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$scrollInfolist" />
+            <x-infolists::infolist :infolist="$scrollInfolist" />
         </div>
     </div>
 
@@ -285,7 +285,7 @@ MD;
             <p class="mt-1 text-sm" style="color: var(--docs-text-muted, #64748b);">Content that can be expanded/collapsed</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$collapsibleInfolist" />
+            <x-infolists::infolist :infolist="$collapsibleInfolist" />
         </div>
     </div>
 
@@ -297,12 +297,12 @@ MD;
         </div>
         <div class="p-6">
             <div class="space-y-6">
-                <x-infolist::markdown-entry
+                <x-infolists::markdown-entry
                     label="Quick Example"
                     value="This is **bold** and *italic* with a [link](#)."
                 />
 
-                <x-infolist::markdown-entry
+                <x-infolists::markdown-entry
                     label="With Code"
                     value="Use `composer require accelade/infolist` to install."
                 />
@@ -310,20 +310,20 @@ MD;
         </div>
         <div class="p-6 pt-0">
             <x-accelade::code-block language="blade">&lt;!-- Basic usage --&gt;
-&lt;x-infolist::markdown-entry
+&lt;x-infolists::markdown-entry
     label="Description"
     :value="$markdownContent"
 /&gt;
 
 &lt;!-- With max height --&gt;
-&lt;x-infolist::markdown-entry
+&lt;x-infolists::markdown-entry
     label="Documentation"
     :value="$docs"
     maxHeight="300px"
 /&gt;
 
 &lt;!-- Collapsible --&gt;
-&lt;x-infolist::markdown-entry
+&lt;x-infolists::markdown-entry
     label="README"
     :value="$readme"
     :collapsible="true"

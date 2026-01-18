@@ -84,7 +84,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Display PHP code with line numbers and copy button</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$phpInfolist" />
+            <x-infolists::infolist :infolist="$phpInfolist" />
         </div>
     </div>
 
@@ -95,7 +95,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Automatically formats arrays/objects as pretty JSON</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$jsonInfolist" />
+            <x-infolists::infolist :infolist="$jsonInfolist" />
         </div>
     </div>
 
@@ -106,7 +106,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">SQL syntax without line numbers</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$sqlInfolist" />
+            <x-infolists::infolist :infolist="$sqlInfolist" />
         </div>
     </div>
 
@@ -117,7 +117,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Scrollable code block with limited height</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$bashInfolist" />
+            <x-infolists::infolist :infolist="$bashInfolist" />
         </div>
     </div>
 
@@ -128,7 +128,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Code block with copy button disabled</p>
         </div>
         <div class="p-6">
-            <x-infolist::infolist :infolist="$htmlInfolist" />
+            <x-infolists::infolist :infolist="$htmlInfolist" />
         </div>
     </div>
 
@@ -139,14 +139,14 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Use directly in Blade without Infolist class</p>
         </div>
         <div class="p-6">
-            <x-infolist::code-entry
+            <x-infolists::code-entry
                 label="Configuration"
                 value="return ['debug' => true, 'cache' => 'redis'];"
                 language="php"
             />
         </div>
         <div class="p-6 pt-0">
-            <x-accelade::code-block language="blade">&lt;x-infolist::code-entry
+            <x-accelade::code-block language="blade">&lt;x-infolists::code-entry
     label="Configuration"
     value="return ['debug' => true, 'cache' => 'redis'];"
     language="php"

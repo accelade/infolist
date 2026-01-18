@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Accelade\Infolist\Components;
+namespace Accelade\Infolists\Components;
 
 use Closure;
 use Illuminate\Support\Str;
@@ -111,6 +111,6 @@ class HtmlEntry extends Entry
 
     protected function getViewName(): string
     {
-        return 'infolist::components.html-entry';
+        return 'infolists::components.html-entry';
     }
 }
