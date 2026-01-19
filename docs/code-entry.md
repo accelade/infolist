@@ -140,19 +140,19 @@ Infolist::make()
 Use the code entry directly in Blade without the Infolist class:
 
 ```blade
-<x-infolist::code-entry
+<x-accelade::code-entry
     label="Configuration"
     value="return ['debug' => true, 'cache' => 'redis'];"
     language="php"
 />
 
-<x-infolist::code-entry
+<x-accelade::code-entry
     label="API Response"
     :value="['name' => 'John', 'email' => 'john@example.com']"
     language="json"
 />
 
-<x-infolist::code-entry
+<x-accelade::code-entry
     label="SQL Query"
     value="SELECT * FROM users WHERE active = 1;"
     language="sql"

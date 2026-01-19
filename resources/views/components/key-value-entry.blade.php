@@ -24,7 +24,7 @@
 @endphp
 
 @if ($hasWrapper && $entry)
-    <x-infolists::entry-wrapper :entry="$entry">
+    <x-accelade::entry-wrapper :entry="$entry">
         @if (is_array($state) && count($state) > 0)
             <div class="overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700">
                 <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
@@ -67,7 +67,7 @@
                 {{ $placeholder }}
             </span>
         @endif
-    </x-infolists::entry-wrapper>
+    </x-accelade::entry-wrapper>
 @else
     {{-- Standalone blade component usage --}}
     <div {{ $attributes->class(['accelade-entry']) }}>

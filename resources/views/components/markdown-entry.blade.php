@@ -285,7 +285,7 @@
 @endonce
 
 @if ($hasWrapper && $entry)
-    <x-infolists::entry-wrapper :entry="$entry">
+    <x-accelade::entry-wrapper :entry="$entry">
         @if ($content)
             @if ($isCollapsible)
                 <div
@@ -339,7 +339,7 @@
                 {{ $placeholder }}
             </span>
         @endif
-    </x-infolists::entry-wrapper>
+    </x-accelade::entry-wrapper>
 @else
     {{-- Standalone blade component usage --}}
     <div {{ $attributes->class(['accelade-entry']) }}>

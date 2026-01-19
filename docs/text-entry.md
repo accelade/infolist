@@ -192,19 +192,19 @@ TextEntry::make('abbreviated_name')
 Use the text entry directly in Blade without the Infolist class:
 
 ```blade
-<x-infolist::text-entry
+<x-accelade::text-entry
     label="Name"
     value="John Doe"
 />
 
-<x-infolist::text-entry
+<x-accelade::text-entry
     label="Email"
     value="john@example.com"
     icon="heroicon-o-envelope"
     iconPosition="before"
 />
 
-<x-infolist::text-entry
+<x-accelade::text-entry
     label="Price"
     value="$99.00"
     size="lg"

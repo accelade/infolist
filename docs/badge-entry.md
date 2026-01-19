@@ -141,13 +141,13 @@ Infolist::make()
 Use the badge entry directly in Blade without the Infolist class:
 
 ```blade
-<x-infolist::badge-entry
+<x-accelade::badge-entry
     label="Status"
     value="Published"
     color="success"
 />
 
-<x-infolist::badge-entry
+<x-accelade::badge-entry
     label="Priority"
     value="High"
     color="danger"
@@ -155,7 +155,7 @@ Use the badge entry directly in Blade without the Infolist class:
     iconPosition="before"
 />
 
-<x-infolist::badge-entry
+<x-accelade::badge-entry
     label="Active"
     :value="true"
     :boolean="true"

@@ -31,10 +31,23 @@ describe('View Loading', function () {
         expect($hints)->toHaveKey('infolists');
     });
 
+    it('adds component views to accelade namespace', function () {
+        $hints = app('view')->getFinder()->getHints();
+
+        expect($hints)->toHaveKey('accelade');
+    });
+
     it('can resolve infolists component views', function () {
         $factory = app('view');
 
         expect($factory->exists('infolists::components.infolist'))->toBeTrue();
+    });
+
+    it('can resolve accelade component views for entries', function () {
+        $factory = app('view');
+
+        // Laravel looks for components in components/ subdirectory
+        expect($factory->exists('accelade::components.text-entry'))->toBeTrue();
     });
 });
 

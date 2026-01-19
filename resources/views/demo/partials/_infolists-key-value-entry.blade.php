@@ -41,7 +41,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Display key-value pairs in a table format</p>
         </div>
         <div class="p-6">
-            <x-infolists::infolist :infolist="$infolist" />
+            <x-accelade::infolist :infolist="$infolist" />
         </div>
     </div>
 
@@ -52,7 +52,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Use directly in Blade without Infolist class</p>
         </div>
         <div class="p-6">
-            <x-infolists::key-value-entry
+            <x-accelade::key-value-entry
                 label="Server Info"
                 :value="['PHP Version' => '8.3', 'Laravel' => '12.0', 'OS' => 'Ubuntu 22.04']"
                 keyLabel="Property"
@@ -60,7 +60,7 @@
             />
         </div>
         <div class="p-6 pt-0">
-            <x-accelade::code-block language="blade">&lt;x-infolists::key-value-entry
+            <x-accelade::code-block language="blade">&lt;x-accelade::key-value-entry
     label="Server Info"
     :value="['PHP Version' => '8.3', 'Laravel' => '12.0', 'OS' => 'Ubuntu 22.04']"
     keyLabel="Property"

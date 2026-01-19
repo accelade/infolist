@@ -6,6 +6,7 @@ namespace Accelade\Infolists;
 
 use Accelade\Accelade;
 use Accelade\Docs\DocsRegistry;
+use Accelade\Mcp\McpRegistry;
 use Illuminate\Support\ServiceProvider;
 
 class InfolistsServiceProvider extends ServiceProvider
@@ -21,7 +22,13 @@ class InfolistsServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
+        // Load views under infolists namespace
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'infolists');
+
+        // Also add views to the accelade namespace for <x-accelade::*> usage
+        // This allows infolist entries to be used as <x-accelade::text-entry>, etc.
+        // Laravel looks for components in the 'components' subdirectory within the namespace
+        $this->app['view']->prependNamespace('accelade', __DIR__.'/../resources/views');
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
@@ -45,6 +52,11 @@ class InfolistsServiceProvider extends ServiceProvider
         // Register documentation sections
         if ($this->app->bound('accelade.docs')) {
             $this->registerDocs();
+        }
+
+        // Register with Accelade MCP
+        if ($this->app->bound('accelade.mcp')) {
+            $this->registerMcp();
         }
     }
 
@@ -164,7 +176,13 @@ HTML;
         // Register navigation group
         $docs->registerGroup('infolists', 'Infolists', '📋', 40);
 
-        // Register sections
+        // Register sub-groups within Infolists
+        $docs->registerSubgroup('infolists', 'text', '📝 Text', '', 10);
+        $docs->registerSubgroup('infolists', 'media', '🖼️ Media', '', 20);
+        $docs->registerSubgroup('infolists', 'data', '📊 Data', '', 30);
+        $docs->registerSubgroup('infolists', 'reference', '📚 Reference', '', 40);
+
+        // Main entry - no subgroup
         $docs->section('infolists-getting-started')
             ->label('Getting Started')
             ->icon('🚀')
@@ -175,6 +193,7 @@ HTML;
             ->inGroup('infolists')
             ->register();
 
+        // Text entries
         $docs->section('infolists-text-entry')
             ->label('Text Entry')
             ->icon('📝')
@@ -184,61 +203,7 @@ HTML;
             ->description('Display text with formatting options')
             ->keywords(['text', 'entry', 'display', 'format', 'badge', 'copy'])
             ->inGroup('infolists')
-            ->register();
-
-        $docs->section('infolists-icon-entry')
-            ->label('Icon Entry')
-            ->icon('🎯')
-            ->markdown('icon-entry.md')
-            ->package('infolists')
-            ->demo()
-            ->description('Display icons with boolean mode')
-            ->keywords(['icon', 'entry', 'boolean', 'status'])
-            ->inGroup('infolists')
-            ->register();
-
-        $docs->section('infolists-image-entry')
-            ->label('Image Entry')
-            ->icon('🖼️')
-            ->markdown('image-entry.md')
-            ->package('infolists')
-            ->demo()
-            ->description('Display single or multiple images')
-            ->keywords(['image', 'entry', 'avatar', 'photo', 'gallery'])
-            ->inGroup('infolists')
-            ->register();
-
-        $docs->section('infolists-color-entry')
-            ->label('Color Entry')
-            ->icon('🎨')
-            ->markdown('color-entry.md')
-            ->package('infolists')
-            ->demo()
-            ->description('Display color swatches')
-            ->keywords(['color', 'entry', 'swatch', 'hex', 'rgb'])
-            ->inGroup('infolists')
-            ->register();
-
-        $docs->section('infolists-key-value-entry')
-            ->label('Key Value Entry')
-            ->icon('🔑')
-            ->markdown('key-value-entry.md')
-            ->package('infolists')
-            ->demo()
-            ->description('Display key-value pairs')
-            ->keywords(['key', 'value', 'entry', 'table', 'metadata'])
-            ->inGroup('infolists')
-            ->register();
-
-        $docs->section('infolists-repeatable-entry')
-            ->label('Repeatable Entry')
-            ->icon('🔄')
-            ->markdown('repeatable-entry.md')
-            ->package('infolists')
-            ->demo()
-            ->description('Display repeated data with nested schema')
-            ->keywords(['repeatable', 'entry', 'nested', 'list', 'grid'])
-            ->inGroup('infolists')
+            ->inSubgroup('text')
             ->register();
 
         $docs->section('infolists-badge-entry')
@@ -250,50 +215,7 @@ HTML;
             ->description('Display values as styled badges with color mapping')
             ->keywords(['badge', 'entry', 'status', 'tag', 'label', 'color'])
             ->inGroup('infolists')
-            ->register();
-
-        $docs->section('infolists-code-entry')
-            ->label('Code Entry')
-            ->icon('💻')
-            ->markdown('code-entry.md')
-            ->package('infolists')
-            ->demo()
-            ->description('Display code snippets with syntax highlighting')
-            ->keywords(['code', 'entry', 'syntax', 'highlight', 'snippet', 'json', 'php'])
-            ->inGroup('infolists')
-            ->register();
-
-        $docs->section('infolists-qr-code-entry')
-            ->label('QR Code Entry')
-            ->icon('📱')
-            ->markdown('qr-code-entry.md')
-            ->package('infolists')
-            ->demo()
-            ->description('Display QR codes and barcodes')
-            ->keywords(['qr', 'code', 'barcode', 'entry', 'scan'])
-            ->inGroup('infolists')
-            ->register();
-
-        $docs->section('infolists-rating-entry')
-            ->label('Rating Entry')
-            ->icon('⭐')
-            ->markdown('rating-entry.md')
-            ->package('infolists')
-            ->demo()
-            ->description('Display ratings with stars or hearts')
-            ->keywords(['rating', 'star', 'heart', 'score', 'entry'])
-            ->inGroup('infolists')
-            ->register();
-
-        $docs->section('infolists-separator-entry')
-            ->label('Separator Entry')
-            ->icon('➖')
-            ->markdown('separator-entry.md')
-            ->package('infolists')
-            ->demo()
-            ->description('Display horizontal or vertical dividers')
-            ->keywords(['separator', 'divider', 'hr', 'line', 'entry'])
-            ->inGroup('infolists')
+            ->inSubgroup('text')
             ->register();
 
         $docs->section('infolists-html-entry')
@@ -305,6 +227,7 @@ HTML;
             ->description('Display HTML or Markdown content')
             ->keywords(['html', 'markdown', 'content', 'prose', 'entry'])
             ->inGroup('infolists')
+            ->inSubgroup('text')
             ->register();
 
         $docs->section('infolists-markdown-entry')
@@ -316,17 +239,19 @@ HTML;
             ->description('Display markdown content with docs-style prose')
             ->keywords(['markdown', 'prose', 'content', 'gfm', 'github', 'entry'])
             ->inGroup('infolists')
+            ->inSubgroup('text')
             ->register();
 
-        $docs->section('infolists-progress-entry')
-            ->label('Progress Entry')
-            ->icon('📊')
-            ->markdown('progress-entry.md')
+        $docs->section('infolists-code-entry')
+            ->label('Code Entry')
+            ->icon('💻')
+            ->markdown('code-entry.md')
             ->package('infolists')
             ->demo()
-            ->description('Display progress bars')
-            ->keywords(['progress', 'bar', 'percentage', 'completion', 'entry'])
+            ->description('Display code snippets with syntax highlighting')
+            ->keywords(['code', 'entry', 'syntax', 'highlight', 'snippet', 'json', 'php'])
             ->inGroup('infolists')
+            ->inSubgroup('text')
             ->register();
 
         $docs->section('infolists-secret-entry')
@@ -338,8 +263,120 @@ HTML;
             ->description('Display masked sensitive data')
             ->keywords(['secret', 'password', 'masked', 'hidden', 'entry'])
             ->inGroup('infolists')
+            ->inSubgroup('text')
             ->register();
 
+        // Media entries
+        $docs->section('infolists-icon-entry')
+            ->label('Icon Entry')
+            ->icon('🎯')
+            ->markdown('icon-entry.md')
+            ->package('infolists')
+            ->demo()
+            ->description('Display icons with boolean mode')
+            ->keywords(['icon', 'entry', 'boolean', 'status'])
+            ->inGroup('infolists')
+            ->inSubgroup('media')
+            ->register();
+
+        $docs->section('infolists-image-entry')
+            ->label('Image Entry')
+            ->icon('🖼️')
+            ->markdown('image-entry.md')
+            ->package('infolists')
+            ->demo()
+            ->description('Display single or multiple images')
+            ->keywords(['image', 'entry', 'avatar', 'photo', 'gallery'])
+            ->inGroup('infolists')
+            ->inSubgroup('media')
+            ->register();
+
+        $docs->section('infolists-color-entry')
+            ->label('Color Entry')
+            ->icon('🎨')
+            ->markdown('color-entry.md')
+            ->package('infolists')
+            ->demo()
+            ->description('Display color swatches')
+            ->keywords(['color', 'entry', 'swatch', 'hex', 'rgb'])
+            ->inGroup('infolists')
+            ->inSubgroup('media')
+            ->register();
+
+        $docs->section('infolists-qr-code-entry')
+            ->label('QR Code Entry')
+            ->icon('📱')
+            ->markdown('qr-code-entry.md')
+            ->package('infolists')
+            ->demo()
+            ->description('Display QR codes and barcodes')
+            ->keywords(['qr', 'code', 'barcode', 'entry', 'scan'])
+            ->inGroup('infolists')
+            ->inSubgroup('media')
+            ->register();
+
+        // Data entries
+        $docs->section('infolists-key-value-entry')
+            ->label('Key Value Entry')
+            ->icon('🔑')
+            ->markdown('key-value-entry.md')
+            ->package('infolists')
+            ->demo()
+            ->description('Display key-value pairs')
+            ->keywords(['key', 'value', 'entry', 'table', 'metadata'])
+            ->inGroup('infolists')
+            ->inSubgroup('data')
+            ->register();
+
+        $docs->section('infolists-repeatable-entry')
+            ->label('Repeatable Entry')
+            ->icon('🔄')
+            ->markdown('repeatable-entry.md')
+            ->package('infolists')
+            ->demo()
+            ->description('Display repeated data with nested schema')
+            ->keywords(['repeatable', 'entry', 'nested', 'list', 'grid'])
+            ->inGroup('infolists')
+            ->inSubgroup('data')
+            ->register();
+
+        $docs->section('infolists-rating-entry')
+            ->label('Rating Entry')
+            ->icon('⭐')
+            ->markdown('rating-entry.md')
+            ->package('infolists')
+            ->demo()
+            ->description('Display ratings with stars or hearts')
+            ->keywords(['rating', 'star', 'heart', 'score', 'entry'])
+            ->inGroup('infolists')
+            ->inSubgroup('data')
+            ->register();
+
+        $docs->section('infolists-progress-entry')
+            ->label('Progress Entry')
+            ->icon('📊')
+            ->markdown('progress-entry.md')
+            ->package('infolists')
+            ->demo()
+            ->description('Display progress bars')
+            ->keywords(['progress', 'bar', 'percentage', 'completion', 'entry'])
+            ->inGroup('infolists')
+            ->inSubgroup('data')
+            ->register();
+
+        $docs->section('infolists-separator-entry')
+            ->label('Separator Entry')
+            ->icon('➖')
+            ->markdown('separator-entry.md')
+            ->package('infolists')
+            ->demo()
+            ->description('Display horizontal or vertical dividers')
+            ->keywords(['separator', 'divider', 'hr', 'line', 'entry'])
+            ->inGroup('infolists')
+            ->inSubgroup('data')
+            ->register();
+
+        // Reference
         $docs->section('infolists-api-reference')
             ->label('API Reference')
             ->icon('📚')
@@ -348,6 +385,25 @@ HTML;
             ->description('Complete API documentation')
             ->keywords(['api', 'reference', 'methods', 'options'])
             ->inGroup('infolists')
+            ->inSubgroup('reference')
             ->register();
+    }
+
+    /**
+     * Register package with Accelade MCP server.
+     */
+    protected function registerMcp(): void
+    {
+        /** @var McpRegistry $mcp */
+        $mcp = $this->app->make('accelade.mcp');
+
+        // Register infolists package documentation for MCP search
+        $mcp->registerPackage(
+            'infolists',
+            __DIR__.'/../docs',
+            'Display read-only information with Filament-compatible API - text, badges, images, icons, colors, ratings, and more'
+        );
+
+        $mcp->registerReadme('infolists', __DIR__.'/../README.md');
     }
 }

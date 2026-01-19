@@ -88,19 +88,19 @@ Infolist::make()
 Use the markdown entry directly in Blade without the Infolist class:
 
 ```blade
-<x-infolist::markdown-entry
+<x-accelade::markdown-entry
     label="Description"
     :value="$markdownContent"
 />
 
-<x-infolist::markdown-entry
+<x-accelade::markdown-entry
     label="README"
     :value="$readme"
     :collapsible="true"
     :collapsed="true"
 />
 
-<x-infolist::markdown-entry
+<x-accelade::markdown-entry
     label="Documentation"
     :value="$docs"
     maxHeight="300px"

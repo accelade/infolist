@@ -135,19 +135,19 @@ Infolist::make()
 Use the secret entry directly in Blade without the Infolist class:
 
 ```blade
-<x-infolist::secret-entry
+<x-accelade::secret-entry
     label="API Key"
     value="sk_live_abc123xyz789"
 />
 
-<x-infolist::secret-entry
+<x-accelade::secret-entry
     label="Password"
     value="supersecret123"
     :revealOnHover="true"
     :revealOnClick="false"
 />
 
-<x-infolist::secret-entry
+<x-accelade::secret-entry
     label="Token"
     value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
     :autoHideAfter="5"

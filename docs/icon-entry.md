@@ -114,13 +114,13 @@ Infolist::make()
 Use the icon entry directly in Blade without the Infolist class:
 
 ```blade
-<x-infolist::icon-entry
+<x-accelade::icon-entry
     label="Status"
     icon="heroicon-o-check-circle"
     color="success"
 />
 
-<x-infolist::icon-entry
+<x-accelade::icon-entry
     label="Email Verified"
     :value="true"
     :boolean="true"
@@ -130,7 +130,7 @@ Use the icon entry directly in Blade without the Infolist class:
     falseColor="danger"
 />
 
-<x-infolist::icon-entry
+<x-accelade::icon-entry
     label="Priority"
     icon="heroicon-o-exclamation-triangle"
     color="warning"

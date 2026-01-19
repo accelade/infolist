@@ -142,12 +142,12 @@ Infolist::make()
 Use the rating entry directly in Blade without the Infolist class:
 
 ```blade
-<x-infolist::rating-entry
+<x-accelade::rating-entry
     label="Rating"
     :value="4"
 />
 
-<x-infolist::rating-entry
+<x-accelade::rating-entry
     label="Customer Rating"
     :value="4.5"
     :max="5"
@@ -156,7 +156,7 @@ Use the rating entry directly in Blade without the Infolist class:
     filledColor="warning"
 />
 
-<x-infolist::rating-entry
+<x-accelade::rating-entry
     label="Popularity"
     :value="3"
     :max="5"
@@ -165,7 +165,7 @@ Use the rating entry directly in Blade without the Infolist class:
     filledColor="danger"
 />
 
-<x-infolist::rating-entry
+<x-accelade::rating-entry
     label="Score"
     :value="8"
     :max="10"

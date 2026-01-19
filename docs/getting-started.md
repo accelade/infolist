@@ -31,7 +31,7 @@ $infolist = Infolist::make()
 ### Rendering in Blade
 
 ```blade
-<x-infolists::infolist :infolist="$infolist" />
+<x-accelade::infolist :infolist="$infolist" />
 ```
 
 Or render directly:

@@ -165,7 +165,7 @@ $comments = [
 ];
 @endphp
 
-<x-infolist::repeatable-entry
+<x-accelade::repeatable-entry
     label="Comments"
     :items="$comments"
 >
@@ -174,10 +174,10 @@ $comments = [
         <span class="font-medium">Author Name</span>
         <span class="text-gray-500">Comment content</span>
     </div>
-</x-infolist::repeatable-entry>
+</x-accelade::repeatable-entry>
 
 {{-- Contained layout --}}
-<x-infolist::repeatable-entry
+<x-accelade::repeatable-entry
     label="Orders"
     :items="$orders"
     :contained="true"
@@ -185,10 +185,10 @@ $comments = [
     <div class="flex items-center justify-between">
         <span>Order details here</span>
     </div>
-</x-infolist::repeatable-entry>
+</x-accelade::repeatable-entry>
 
 {{-- Grid layout --}}
-<x-infolist::repeatable-entry
+<x-accelade::repeatable-entry
     label="Team Members"
     :items="$members"
     :grid="true"
@@ -197,7 +197,7 @@ $comments = [
     <div class="text-center">
         <div class="font-medium">Member Name</div>
     </div>
-</x-infolist::repeatable-entry>
+</x-accelade::repeatable-entry>
 ```
 
 ### Available Props

@@ -110,7 +110,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Simple horizontal divider between entries</p>
         </div>
         <div class="p-6">
-            <x-infolists::infolist :infolist="$basicInfolist" />
+            <x-accelade::infolist :infolist="$basicInfolist" />
         </div>
     </div>
 
@@ -121,7 +121,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Solid, dashed, and dotted styles</p>
         </div>
         <div class="p-6">
-            <x-infolists::infolist :infolist="$stylesInfolist" />
+            <x-accelade::infolist :infolist="$stylesInfolist" />
         </div>
     </div>
 
@@ -132,7 +132,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Thin, medium, and thick separators</p>
         </div>
         <div class="p-6">
-            <x-infolists::infolist :infolist="$thicknessInfolist" />
+            <x-accelade::infolist :infolist="$thicknessInfolist" />
         </div>
     </div>
 
@@ -143,7 +143,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Separators with different colors</p>
         </div>
         <div class="p-6">
-            <x-infolists::infolist :infolist="$colorsInfolist" />
+            <x-accelade::infolist :infolist="$colorsInfolist" />
         </div>
     </div>
 
@@ -154,7 +154,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Separators with text labels</p>
         </div>
         <div class="p-6">
-            <x-infolists::infolist :infolist="$textInfolist" />
+            <x-accelade::infolist :infolist="$textInfolist" />
         </div>
     </div>
 
@@ -165,7 +165,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Text divider with dashed style and custom color</p>
         </div>
         <div class="p-6">
-            <x-infolists::infolist :infolist="$combinedInfolist" />
+            <x-accelade::infolist :infolist="$combinedInfolist" />
         </div>
     </div>
 
@@ -177,29 +177,29 @@
         </div>
         <div class="p-6 space-y-4">
             <p class="text-sm text-gray-600 dark:text-gray-400">Simple separator:</p>
-            <x-infolists::separator-entry />
+            <x-accelade::separator-entry />
 
             <p class="text-sm text-gray-600 dark:text-gray-400">Dashed with text:</p>
-            <x-infolists::separator-entry
+            <x-accelade::separator-entry
                 text="OR"
                 style="dashed"
             />
 
             <p class="text-sm text-gray-600 dark:text-gray-400">Primary color, thick:</p>
-            <x-infolists::separator-entry
+            <x-accelade::separator-entry
                 color="primary"
                 thickness="thick"
             />
         </div>
         <div class="p-6 pt-0">
-            <x-accelade::code-block language="blade">&lt;x-infolists::separator-entry /&gt;
+            <x-accelade::code-block language="blade">&lt;x-accelade::separator-entry /&gt;
 
-&lt;x-infolists::separator-entry
+&lt;x-accelade::separator-entry
     text="OR"
     style="dashed"
 /&gt;
 
-&lt;x-infolists::separator-entry
+&lt;x-accelade::separator-entry
     color="primary"
     thickness="thick"
 /&gt;</x-accelade::code-block>

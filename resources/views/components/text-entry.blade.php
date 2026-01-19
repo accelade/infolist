@@ -39,6 +39,7 @@
         $url = $entry->getUrl();
         $shouldOpenUrlInNewTab = $entry->shouldOpenUrlInNewTab();
         $tooltip = $entry->getTooltip();
+        $tooltipConfig = $entry->getTooltipConfig();
         $isBadge = $entry->isBadge();
         $badgeColor = $entry->getBadgeColor();
         $icon = $entry->getIcon();
@@ -64,6 +65,7 @@
         $isBulleted = $bulleted;
         $isMarkdown = $markdown;
         $isHtml = $html;
+        $tooltipConfig = $tooltip;
         $hasWrapper = false;
 
         $sizeClasses = match($size) {
@@ -108,7 +110,7 @@
 @endphp
 
 @if ($hasWrapper && $entry)
-    <x-infolists::entry-wrapper :entry="$entry">
+    <x-accelade::entry-wrapper :entry="$entry">
         @if ($displayValue === null || $displayValue === '')
             <span class="text-gray-400 dark:text-gray-500 {{ $sizeClasses }}">
                 {{ $placeholder }}
@@ -162,8 +164,8 @@
                         data-copy-message="{{ $copyMessage }}"
                         data-copy-message-duration="{{ $copyMessageDuration }}"
                     @endif
-                    @if ($tooltip)
-                        title="{{ $tooltip }}"
+                    @if ($tooltipConfig)
+                        a-tooltip="{{ $tooltipConfig }}"
                     @endif
                     @class([
                         'inline-flex items-center gap-x-2',
@@ -229,7 +231,7 @@
                 </div>
             @endif
         @endif
-    </x-infolists::entry-wrapper>
+    </x-accelade::entry-wrapper>
 @else
     {{-- Standalone blade component usage --}}
     <div {{ $attributes->class(['accelade-entry']) }}>
@@ -274,8 +276,8 @@
                             data-copy-message="{{ $copyMessage }}"
                             data-copy-message-duration="{{ $copyMessageDuration }}"
                         @endif
-                        @if ($tooltip)
-                            title="{{ $tooltip }}"
+                        @if ($tooltipConfig)
+                            a-tooltip="{{ $tooltipConfig }}"
                         @endif
                         @class([
                             'inline-flex items-center gap-x-2',

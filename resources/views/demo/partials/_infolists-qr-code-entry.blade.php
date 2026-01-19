@@ -165,7 +165,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Default QR code with 128x128 size</p>
         </div>
         <div class="p-6">
-            <x-infolists::infolist :infolist="$basicQrInfolist" />
+            <x-accelade::infolist :infolist="$basicQrInfolist" />
         </div>
         <div class="p-6 pt-0">
             <x-accelade::code-block language="php">
@@ -183,7 +183,7 @@ QrCodeEntry::make('url')
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Using Grid::make(4) from schemas package</p>
         </div>
         <div class="p-6">
-            <x-infolists::infolist :infolist="$qrSizesInfolist" />
+            <x-accelade::infolist :infolist="$qrSizesInfolist" />
         </div>
         <div class="p-6 pt-0">
             <x-accelade::code-block language="php">
@@ -212,7 +212,7 @@ Infolist::make()
                 values</p>
         </div>
         <div class="p-6">
-            <x-infolists::infolist :infolist="$qrColorsInfolist" />
+            <x-accelade::infolist :infolist="$qrColorsInfolist" />
         </div>
         <div class="p-6 pt-0">
             <x-accelade::code-block language="php">
@@ -231,7 +231,7 @@ QrCodeEntry::make('url')
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Control the quiet zone around the QR code</p>
         </div>
         <div class="p-6">
-            <x-infolists::infolist :infolist="$qrMarginsInfolist" />
+            <x-accelade::infolist :infolist="$qrMarginsInfolist" />
         </div>
         <div class="p-6 pt-0">
             <x-accelade::code-block language="php">
@@ -251,7 +251,7 @@ QrCodeEntry::make('url')
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">QR code with download button</p>
         </div>
         <div class="p-6">
-            <x-infolists::infolist :infolist="$downloadableQrInfolist" />
+            <x-accelade::infolist :infolist="$downloadableQrInfolist" />
         </div>
         <div class="p-6 pt-0">
             <x-accelade::code-block language="php">
@@ -270,7 +270,7 @@ QrCodeEntry::make('ticket')
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">WiFi networks, email addresses, URLs, and more</p>
         </div>
         <div class="p-6">
-            <x-infolists::infolist :infolist="$useCasesInfolist" />
+            <x-accelade::infolist :infolist="$useCasesInfolist" />
         </div>
         <div class="p-6 pt-0">
             <x-accelade::code-block language="php">
@@ -314,7 +314,7 @@ Infolist::make()
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Code128 format with text label below</p>
         </div>
         <div class="p-6">
-            <x-infolists::infolist :infolist="$basicBarcodeInfolist" />
+            <x-accelade::infolist :infolist="$basicBarcodeInfolist" />
         </div>
         <div class="p-6 pt-0">
             <x-accelade::code-block language="php">
@@ -333,7 +333,7 @@ QrCodeEntry::make('sku')
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Using Grid::make(2) from schemas package</p>
         </div>
         <div class="p-6">
-            <x-infolists::infolist :infolist="$barcodeFormatsInfolist" />
+            <x-accelade::infolist :infolist="$barcodeFormatsInfolist" />
         </div>
         <div class="p-6 pt-0">
             <x-accelade::code-block language="php">
@@ -361,7 +361,7 @@ Infolist::make()
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Control height and bar width</p>
         </div>
         <div class="p-6">
-            <x-infolists::infolist :infolist="$barcodeDimensionsInfolist" />
+            <x-accelade::infolist :infolist="$barcodeDimensionsInfolist" />
         </div>
         <div class="p-6 pt-0">
             <x-accelade::code-block language="php">
@@ -381,7 +381,7 @@ QrCodeEntry::make('sku')
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Show, hide, or customize the text label</p>
         </div>
         <div class="p-6">
-            <x-infolists::infolist :infolist="$barcodeTextOptionsInfolist" />
+            <x-accelade::infolist :infolist="$barcodeTextOptionsInfolist" />
         </div>
         <div class="p-6 pt-0">
             <x-accelade::code-block language="php">
@@ -403,7 +403,7 @@ QrCodeEntry::make('sku')
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Custom barcode colors using hex values</p>
         </div>
         <div class="p-6">
-            <x-infolists::infolist :infolist="$barcodeColorsInfolist" />
+            <x-accelade::infolist :infolist="$barcodeColorsInfolist" />
         </div>
         <div class="p-6 pt-0">
             <x-accelade::code-block language="php">
@@ -422,7 +422,7 @@ QrCodeEntry::make('sku')
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Barcode with download button</p>
         </div>
         <div class="p-6">
-            <x-infolists::infolist :infolist="$downloadableBarcodeInfolist" />
+            <x-accelade::infolist :infolist="$downloadableBarcodeInfolist" />
         </div>
         <div class="p-6 pt-0">
             <x-accelade::code-block language="php">
@@ -442,23 +442,23 @@ QrCodeEntry::make('ean13')
         </div>
         <div class="p-6">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <x-infolists::qr-code-entry value="https://example.com" label="Default QR" />
-                <x-infolists::qr-code-entry value="https://example.com" label="Small QR" :size="64" />
-                <x-infolists::qr-code-entry value="https://example.com" label="Blue QR" color="0066CC"
+                <x-accelade::qr-code-entry value="https://example.com" label="Default QR" />
+                <x-accelade::qr-code-entry value="https://example.com" label="Small QR" :size="64" />
+                <x-accelade::qr-code-entry value="https://example.com" label="Blue QR" color="0066CC"
                     backgroundColor="E6F0FF" />
-                <x-infolists::qr-code-entry value="https://example.com" label="Downloadable" :downloadable="true" />
+                <x-accelade::qr-code-entry value="https://example.com" label="Downloadable" :downloadable="true" />
             </div>
         </div>
         <div class="p-6 pt-0">
             <x-accelade::code-block language="blade">
 {{-- Basic QR Code --}}
-&lt;x-infolists::qr-code-entry value="https://example.com" label="Default QR" /&gt;
+&lt;x-accelade::qr-code-entry value="https://example.com" label="Default QR" /&gt;
 
 {{-- Small QR Code --}}
-&lt;x-infolists::qr-code-entry value="https://example.com" label="Small QR" :size="64" /&gt;
+&lt;x-accelade::qr-code-entry value="https://example.com" label="Small QR" :size="64" /&gt;
 
 {{-- Colored QR Code --}}
-&lt;x-infolists::qr-code-entry
+&lt;x-accelade::qr-code-entry
     value="https://example.com"
     label="Blue QR"
     color="0066CC"
@@ -466,7 +466,7 @@ QrCodeEntry::make('ean13')
 /&gt;
 
 {{-- Downloadable QR Code --}}
-&lt;x-infolists::qr-code-entry value="https://example.com" label="Downloadable" :downloadable="true" /&gt;
+&lt;x-accelade::qr-code-entry value="https://example.com" label="Downloadable" :downloadable="true" /&gt;
             </x-accelade::code-block>
         </div>
     </div>
@@ -480,15 +480,15 @@ QrCodeEntry::make('ean13')
         </div>
         <div class="p-6">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <x-infolists::qr-code-entry value="SKU-12345678" label="Code128" type="barcode"
+                <x-accelade::qr-code-entry value="SKU-12345678" label="Code128" type="barcode"
                     barcodeFormat="code128" />
-                <x-infolists::qr-code-entry value="5901234123457" label="EAN-13" type="barcode" barcodeFormat="ean13" />
+                <x-accelade::qr-code-entry value="5901234123457" label="EAN-13" type="barcode" barcodeFormat="ean13" />
             </div>
         </div>
         <div class="p-6 pt-0">
             <x-accelade::code-block language="blade">
 {{-- Code128 Barcode --}}
-&lt;x-infolists::qr-code-entry
+&lt;x-accelade::qr-code-entry
     value="SKU-12345678"
     label="Code128"
     type="barcode"
@@ -496,7 +496,7 @@ QrCodeEntry::make('ean13')
 /&gt;
 
 {{-- EAN-13 Barcode --}}
-&lt;x-infolists::qr-code-entry
+&lt;x-accelade::qr-code-entry
     value="5901234123457"
     label="EAN-13"
     type="barcode"

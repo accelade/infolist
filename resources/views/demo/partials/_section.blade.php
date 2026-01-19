@@ -17,6 +17,6 @@
     </div>
 
     <div class="p-6">
-        <x-infolists::infolist :infolist="$infolist" />
+        <x-accelade::infolist :infolist="$infolist" />
     </div>
 </section>

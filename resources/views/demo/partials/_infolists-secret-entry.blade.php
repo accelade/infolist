@@ -102,7 +102,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Click the eye icon to reveal</p>
         </div>
         <div class="p-6">
-            <x-infolists::infolist :infolist="$basicInfolist" />
+            <x-accelade::infolist :infolist="$basicInfolist" />
         </div>
     </div>
 
@@ -113,7 +113,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Shows last 4 characters of the value</p>
         </div>
         <div class="p-6">
-            <x-infolists::infolist :infolist="$lastCharsInfolist" />
+            <x-accelade::infolist :infolist="$lastCharsInfolist" />
         </div>
     </div>
 
@@ -124,7 +124,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Shows first 4 characters of the value</p>
         </div>
         <div class="p-6">
-            <x-infolists::infolist :infolist="$firstCharsInfolist" />
+            <x-accelade::infolist :infolist="$firstCharsInfolist" />
         </div>
     </div>
 
@@ -135,7 +135,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Uses bullet points as mask</p>
         </div>
         <div class="p-6">
-            <x-infolists::infolist :infolist="$customMaskInfolist" />
+            <x-accelade::infolist :infolist="$customMaskInfolist" />
         </div>
     </div>
 
@@ -146,7 +146,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Hover over the value to reveal</p>
         </div>
         <div class="p-6">
-            <x-infolists::infolist :infolist="$hoverInfolist" />
+            <x-accelade::infolist :infolist="$hoverInfolist" />
         </div>
     </div>
 
@@ -157,7 +157,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Automatically hides after 3 seconds</p>
         </div>
         <div class="p-6">
-            <x-infolists::infolist :infolist="$autoHideInfolist" />
+            <x-accelade::infolist :infolist="$autoHideInfolist" />
         </div>
     </div>
 
@@ -168,7 +168,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Cannot be revealed (always masked)</p>
         </div>
         <div class="p-6">
-            <x-infolists::infolist :infolist="$noRevealInfolist" />
+            <x-accelade::infolist :infolist="$noRevealInfolist" />
         </div>
     </div>
 
@@ -179,7 +179,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Multiple secrets with different configurations</p>
         </div>
         <div class="p-6">
-            <x-infolists::infolist :infolist="$combinedInfolist" />
+            <x-accelade::infolist :infolist="$combinedInfolist" />
         </div>
     </div>
 
@@ -191,12 +191,12 @@
         </div>
         <div class="p-6">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <x-infolists::secret-entry
+                <x-accelade::secret-entry
                     label="API Key"
                     value="sk_live_abc123xyz789"
                 />
 
-                <x-infolists::secret-entry
+                <x-accelade::secret-entry
                     label="Password"
                     value="supersecret123"
                     :revealOnHover="true"
@@ -205,12 +205,12 @@
             </div>
         </div>
         <div class="p-6 pt-0">
-            <x-accelade::code-block language="blade">&lt;x-infolists::secret-entry
+            <x-accelade::code-block language="blade">&lt;x-accelade::secret-entry
     label="API Key"
     value="sk_live_abc123xyz789"
 /&gt;
 
-&lt;x-infolists::secret-entry
+&lt;x-accelade::secret-entry
     label="Password"
     value="supersecret123"
     :revealOnHover="true"

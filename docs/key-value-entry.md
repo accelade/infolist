@@ -96,14 +96,14 @@ The component handles nested arrays and objects:
 Use the key-value entry directly in Blade without the Infolist class:
 
 ```blade
-<x-infolist::key-value-entry
+<x-accelade::key-value-entry
     label="Server Info"
     :value="['PHP Version' => '8.3', 'Laravel' => '12.0', 'OS' => 'Ubuntu 22.04']"
     keyLabel="Property"
     valueLabel="Value"
 />
 
-<x-infolist::key-value-entry
+<x-accelade::key-value-entry
     label="Package Dependencies"
     :value="['laravel/framework' => '^12.0', 'php' => '>=8.2']"
     keyLabel="Package"

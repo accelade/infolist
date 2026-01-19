@@ -19,6 +19,7 @@
         $copyMessage = $entry->getCopyMessage();
         $copyMessageDuration = $entry->getCopyMessageDuration();
         $tooltip = $entry->getTooltip();
+        $tooltipConfig = $entry->getTooltipConfig();
         $hasWrapper = true;
     } else {
         // Prop-based standalone usage
@@ -29,7 +30,7 @@
 @endphp
 
 @if ($hasWrapper && $entry)
-    <x-infolists::entry-wrapper :entry="$entry">
+    <x-accelade::entry-wrapper :entry="$entry">
         @if ($state)
             <div
                 @if ($isCopyable)
@@ -38,8 +39,8 @@
                     data-copy-message="{{ $copyMessage }}"
                     data-copy-message-duration="{{ $copyMessageDuration }}"
                 @endif
-                @if ($tooltip)
-                    title="{{ $tooltip }}"
+                @if ($tooltipConfig)
+                    a-tooltip="{{ $tooltipConfig }}"
                 @endif
                 @class([
                     'inline-flex items-center gap-x-2',
@@ -70,7 +71,7 @@
                 {{ $placeholder }}
             </span>
         @endif
-    </x-infolists::entry-wrapper>
+    </x-accelade::entry-wrapper>
 @else
     {{-- Standalone blade component usage --}}
     <div {{ $attributes->class(['accelade-entry']) }}>
@@ -90,7 +91,7 @@
                         data-copy-message-duration="{{ $copyMessageDuration }}"
                     @endif
                     @if ($tooltip)
-                        title="{{ $tooltip }}"
+                        a-tooltip="{{ $tooltip }}"
                     @endif
                     @class([
                         'inline-flex items-center gap-x-2',

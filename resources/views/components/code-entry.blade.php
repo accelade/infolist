@@ -17,6 +17,7 @@
         $language = $entry->getLanguage();
         $maxHeight = $entry->getMaxHeight();
         $tooltip = $entry->getTooltip();
+        $tooltipConfig = $entry->getTooltipConfig();
         $hasWrapper = true;
     } else {
         // Prop-based standalone usage
@@ -29,20 +30,20 @@
 @endphp
 
 @if ($hasWrapper && $entry)
-    <x-infolists::entry-wrapper :entry="$entry">
+    <x-accelade::entry-wrapper :entry="$entry">
         @if ($state === null || $state === '')
             <span class="text-gray-400 dark:text-gray-500 text-sm">
                 {{ $placeholder }}
             </span>
         @else
             <div
-                @if ($tooltip) title="{{ $tooltip }}" @endif
+                @if ($tooltipConfig) a-tooltip="{{ $tooltipConfig }}" @endif
                 @if ($maxHeight) style="max-height: {{ $maxHeight }}px; overflow-y: auto;" @endif
             >
                 <x-accelade::code-block :language="$language">{{ $codeContent }}</x-accelade::code-block>
             </div>
         @endif
-    </x-infolists::entry-wrapper>
+    </x-accelade::entry-wrapper>
 @else
     {{-- Standalone blade component usage --}}
     <div {{ $attributes->class(['accelade-entry']) }}>
@@ -57,7 +58,7 @@
                 <span class="text-gray-400 dark:text-gray-500 text-sm">{{ $placeholder }}</span>
             @else
                 <div
-                    @if ($tooltip) title="{{ $tooltip }}" @endif
+                    @if ($tooltip) a-tooltip="{{ $tooltip }}" @endif
                     @if ($maxHeight) style="max-height: {{ $maxHeight }}px; overflow-y: auto;" @endif
                 >
                     <x-accelade::code-block :language="$language">{{ $codeContent }}</x-accelade::code-block>

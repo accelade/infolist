@@ -24,6 +24,7 @@
         $color = $entry->getColor();
         $size = $entry->getIconSize();
         $tooltip = $entry->getTooltip();
+        $tooltipConfig = $entry->getTooltipConfig();
         $isBoolean = $entry->isBoolean();
         $trueIcon = $entry->getTrueIcon();
         $falseIcon = $entry->getFalseIcon();
@@ -73,11 +74,11 @@
 @endphp
 
 @if ($hasWrapper && $entry)
-    <x-infolists::entry-wrapper :entry="$entry">
+    <x-accelade::entry-wrapper :entry="$entry">
         @if ($displayIcon)
             <div
-                @if ($tooltip)
-                    title="{{ $tooltip }}"
+                @if ($tooltipConfig)
+                    a-tooltip="{{ $tooltipConfig }}"
                 @endif
                 class="inline-flex"
             >
@@ -94,7 +95,7 @@
                 {{ $placeholder }}
             </span>
         @endif
-    </x-infolists::entry-wrapper>
+    </x-accelade::entry-wrapper>
 @else
     {{-- Standalone blade component usage --}}
     <div {{ $attributes->class(['accelade-entry']) }}>
@@ -108,7 +109,7 @@
             @if ($displayIcon)
                 <div
                     @if ($tooltip)
-                        title="{{ $tooltip }}"
+                        a-tooltip="{{ $tooltip }}"
                     @endif
                     class="inline-flex"
                 >

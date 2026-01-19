@@ -82,19 +82,19 @@ Infolist::make()
 Use the color entry directly in Blade without the Infolist class:
 
 ```blade
-<x-infolist::color-entry
+<x-accelade::color-entry
     label="Primary Color"
     value="#3B82F6"
 />
 
-<x-infolist::color-entry
+<x-accelade::color-entry
     label="Brand Color"
     value="#10B981"
     :copyable="true"
     copyMessage="Color copied!"
 />
 
-<x-infolist::color-entry
+<x-accelade::color-entry
     label="Theme Color"
     value="rgb(139, 92, 246)"
     tooltip="Click to copy"

@@ -19,6 +19,7 @@
         $icon = $entry->getBadgeIconForState();
         $iconPosition = $entry->getIconPosition();
         $tooltip = $entry->getTooltip();
+        $tooltipConfig = $entry->getTooltipConfig();
         $hasWrapper = true;
     } else {
         // Prop-based standalone usage
@@ -40,14 +41,14 @@
 @endphp
 
 @if ($hasWrapper && $entry)
-    <x-infolists::entry-wrapper :entry="$entry">
+    <x-accelade::entry-wrapper :entry="$entry">
         @if ($state === null || $state === '')
             <span class="text-gray-400 dark:text-gray-500 text-sm">
                 {{ $placeholder }}
             </span>
         @else
             <span
-                @if ($tooltip) title="{{ $tooltip }}" @endif
+                @if ($tooltipConfig) a-tooltip="{{ $tooltipConfig }}" @endif
                 @class([
                     'inline-flex items-center justify-center gap-x-1 rounded-md px-2.5 py-1 text-xs font-semibold ring-1 ring-inset shadow-sm hover:shadow transition-all duration-150',
                     $colorClasses,
@@ -64,7 +65,7 @@
                 @endif
             </span>
         @endif
-    </x-infolists::entry-wrapper>
+    </x-accelade::entry-wrapper>
 @else
     {{-- Standalone blade component usage --}}
     <div {{ $attributes->class(['accelade-entry']) }}>
@@ -79,7 +80,7 @@
                 <span class="text-gray-400 dark:text-gray-500 text-sm">{{ $placeholder }}</span>
             @else
                 <span
-                    @if ($tooltip) title="{{ $tooltip }}" @endif
+                    @if ($tooltip) a-tooltip="{{ $tooltip }}" @endif
                     @class([
                         'inline-flex items-center justify-center gap-x-1 rounded-md px-2.5 py-1 text-xs font-semibold ring-1 ring-inset shadow-sm hover:shadow transition-all duration-150',
                         $colorClasses,

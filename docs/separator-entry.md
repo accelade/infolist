@@ -146,29 +146,29 @@ Use the separator entry directly in Blade without the Infolist class:
 
 ```blade
 {{-- Simple horizontal separator --}}
-<x-infolist::separator-entry />
+<x-accelade::separator-entry />
 
 {{-- Dashed separator with text --}}
-<x-infolist::separator-entry
+<x-accelade::separator-entry
     text="OR"
     style="dashed"
 />
 
 {{-- Colored thick separator --}}
-<x-infolist::separator-entry
+<x-accelade::separator-entry
     color="primary"
     thickness="thick"
 />
 
 {{-- Separator with left-aligned text --}}
-<x-infolist::separator-entry
+<x-accelade::separator-entry
     text="Section Title"
     textPosition="left"
     style="dotted"
 />
 
 {{-- Vertical separator (for flex layouts) --}}
-<x-infolist::separator-entry
+<x-accelade::separator-entry
     orientation="vertical"
     color="gray"
 />

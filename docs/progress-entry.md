@@ -154,12 +154,12 @@ Infolist::make()
 Use the progress entry directly in Blade without the Infolist class:
 
 ```blade
-<x-infolist::progress-entry
+<x-accelade::progress-entry
     label="Completion"
     :value="75"
 />
 
-<x-infolist::progress-entry
+<x-accelade::progress-entry
     label="Storage Used"
     :value="80"
     color="danger"
@@ -167,7 +167,7 @@ Use the progress entry directly in Blade without the Infolist class:
     :showLabel="true"
 />
 
-<x-infolist::progress-entry
+<x-accelade::progress-entry
     label="Processing"
     :value="50"
     color="info"
@@ -175,7 +175,7 @@ Use the progress entry directly in Blade without the Infolist class:
     :animated="true"
 />
 
-<x-infolist::progress-entry
+<x-accelade::progress-entry
     label="Points"
     :value="750"
     :min="0"

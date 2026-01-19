@@ -122,19 +122,19 @@ Infolist::make()
 Use the HTML entry directly in Blade without the Infolist class:
 
 ```blade
-<x-infolist::html-entry
+<x-accelade::html-entry
     label="Description"
     value="<p>This is <strong>formatted</strong> HTML content.</p>"
 />
 
-<x-infolist::html-entry
+<x-accelade::html-entry
     label="README"
     value="# Welcome\n\nThis is **markdown** content."
     :markdown="true"
     :prose="true"
 />
 
-<x-infolist::html-entry
+<x-accelade::html-entry
     label="Long Content"
     value="<p>Very long content here...</p>"
     maxHeight="200px"

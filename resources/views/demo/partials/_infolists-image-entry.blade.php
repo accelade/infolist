@@ -168,7 +168,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Display images as square, circular, or rounded</p>
         </div>
         <div class="p-6">
-            <x-infolists::infolist :infolist="$basicInfolist" />
+            <x-accelade::infolist :infolist="$basicInfolist" />
         </div>
     </div>
 
@@ -179,7 +179,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Available sizes: xs, sm, md, lg, xl, 2xl</p>
         </div>
         <div class="p-6">
-            <x-infolists::infolist :infolist="$sizesInfolist" />
+            <x-accelade::infolist :infolist="$sizesInfolist" />
         </div>
     </div>
 
@@ -190,7 +190,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Display team avatars with stacking and overflow count</p>
         </div>
         <div class="p-6">
-            <x-infolists::infolist :infolist="$stackedInfolist" />
+            <x-accelade::infolist :infolist="$stackedInfolist" />
         </div>
     </div>
 
@@ -201,7 +201,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Set explicit width and height for images</p>
         </div>
         <div class="p-6">
-            <x-infolists::infolist :infolist="$customInfolist" />
+            <x-accelade::infolist :infolist="$customInfolist" />
         </div>
     </div>
 
@@ -212,7 +212,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Display multiple images in a gallery layout</p>
         </div>
         <div class="p-6">
-            <x-infolists::infolist :infolist="$galleryInfolist" />
+            <x-accelade::infolist :infolist="$galleryInfolist" />
         </div>
     </div>
 
@@ -223,7 +223,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Optimize loading performance with lazy/eager loading and alt text</p>
         </div>
         <div class="p-6">
-            <x-infolists::infolist :infolist="$lazyInfolist" />
+            <x-accelade::infolist :infolist="$lazyInfolist" />
         </div>
     </div>
 
@@ -234,7 +234,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Use &lt;picture&gt; tag with multiple sources for art direction</p>
         </div>
         <div class="p-6">
-            <x-infolists::infolist :infolist="$pictureInfolist" />
+            <x-accelade::infolist :infolist="$pictureInfolist" />
         </div>
     </div>
 
@@ -246,7 +246,7 @@
         </div>
         <div class="p-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <x-infolists::image-entry
+                <x-accelade::image-entry
                     label="Profile Photo"
                     value="https://i.pravatar.cc/150?u=blade"
                     alt="User profile photo"
@@ -254,7 +254,7 @@
                     size="xl"
                 />
 
-                <x-infolists::image-entry
+                <x-accelade::image-entry
                     label="Eager Loading"
                     value="https://picsum.photos/seed/blade/200/200"
                     alt="Eagerly loaded image"
@@ -263,7 +263,7 @@
                     size="lg"
                 />
 
-                <x-infolists::image-entry
+                <x-accelade::image-entry
                     label="Stacked Avatars"
                     :value="['https://i.pravatar.cc/150?u=a', 'https://i.pravatar.cc/150?u=b', 'https://i.pravatar.cc/150?u=c']"
                     alt="Team members"
@@ -277,7 +277,7 @@
                         ['srcset' => 'https://picsum.photos/seed/small/100/100', 'media' => '(max-width: 640px)'],
                     ];
                 @endphp
-                <x-infolists::image-entry
+                <x-accelade::image-entry
                     label="Picture Tag"
                     value="https://picsum.photos/seed/large/200/200"
                     alt="Responsive picture"
@@ -289,7 +289,7 @@
         </div>
         <div class="p-6 pt-0">
             <x-accelade::code-block language="blade">@verbatim{{-- Basic with alt text --}}
-<x-infolists::image-entry
+<x-accelade::image-entry
     label="Profile Photo"
     value="https://example.com/avatar.jpg"
     alt="User profile photo"
@@ -298,7 +298,7 @@
 />
 
 {{-- Eager loading for above-fold images --}}
-<x-infolists::image-entry
+<x-accelade::image-entry
     label="Hero Image"
     value="https://example.com/hero.jpg"
     loading="eager"
@@ -307,7 +307,7 @@
 />
 
 {{-- Stacked avatars with accessibility --}}
-<x-infolists::image-entry
+<x-accelade::image-entry
     label="Team"
     :value="['url1.jpg', 'url2.jpg', 'url3.jpg']"
     alt="Team members"
@@ -323,7 +323,7 @@ $sources = [
     ['srcset' => '/img/mobile.jpg', 'media' => '(max-width: 640px)'],
 ];
 @endphp
-<x-infolists::image-entry
+<x-accelade::image-entry
     label="Responsive"
     value="/img/desktop.jpg"
     alt="Responsive image"

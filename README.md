@@ -83,14 +83,14 @@ $infolist = Infolist::make()
 Render in Blade:
 
 ```blade
-<x-infolists::infolist :infolist="$infolist" />
+<x-accelade::infolist :infolist="$infolist" />
 ```
 
 Or use standalone components directly:
 
 ```blade
-<x-infolists::text-entry label="Name" :value="$user->name" />
-<x-infolists::badge-entry label="Status" value="Active" color="success" />
+<x-accelade::text-entry label="Name" :value="$user->name" />
+<x-accelade::badge-entry label="Status" value="Active" color="success" />
 ```
 
 ---
@@ -290,32 +290,32 @@ Infolist::make()
 Use any entry directly in Blade without creating an Infolist:
 
 ```blade
-<x-infolists::text-entry
+<x-accelade::text-entry
     label="Email"
     :value="$user->email"
     icon="heroicon-o-envelope"
 />
 
-<x-infolists::badge-entry
+<x-accelade::badge-entry
     label="Status"
     value="Active"
     color="success"
 />
 
-<x-infolists::image-entry
+<x-accelade::image-entry
     label="Avatar"
     :value="$user->avatar_url"
     :circular="true"
     :size="64"
 />
 
-<x-infolists::rating-entry
+<x-accelade::rating-entry
     label="Score"
     :value="4"
     :max="5"
 />
 
-<x-infolists::markdown-entry
+<x-accelade::markdown-entry
     label="Description"
     :value="$markdownContent"
     :collapsible="true"

@@ -183,14 +183,14 @@ Infolist::make()
 Use the image entry directly in Blade without the Infolist class:
 
 ```blade
-<x-infolist::image-entry
+<x-accelade::image-entry
     label="Avatar"
     value="/images/avatar.jpg"
     :circular="true"
     size="lg"
 />
 
-<x-infolist::image-entry
+<x-accelade::image-entry
     label="Product Photo"
     value="/images/product.jpg"
     :square="true"
@@ -198,7 +198,7 @@ Use the image entry directly in Blade without the Infolist class:
     :height="200"
 />
 
-<x-infolist::image-entry
+<x-accelade::image-entry
     label="Team Members"
     :value="['/img/user1.jpg', '/img/user2.jpg', '/img/user3.jpg']"
     :stacked="true"

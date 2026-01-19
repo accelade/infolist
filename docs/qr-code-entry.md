@@ -21,7 +21,7 @@ $infolist = Infolist::make()
 @endphp
 
 {{-- Render using the blade component --}}
-<x-infolist::infolist :infolist="$infolist" />
+<x-accelade::infolist :infolist="$infolist" />
 ```
 
 ## Basic Usage
@@ -176,7 +176,7 @@ Infolist::make()
 Render the infolist using the blade component:
 
 ```blade
-<x-infolist::infolist :infolist="$infolist" />
+<x-accelade::infolist :infolist="$infolist" />
 ```
 
 This renders all entries with proper styling and grid layout support.
@@ -186,12 +186,12 @@ This renders all entries with proper styling and grid layout support.
 Use the QR code entry directly in Blade without the Infolist class:
 
 ```blade
-<x-infolist::qr-code-entry
+<x-accelade::qr-code-entry
     label="Website QR"
     value="https://example.com"
 />
 
-<x-infolist::qr-code-entry
+<x-accelade::qr-code-entry
     label="Custom QR"
     value="https://laravel.com"
     :qrSize="200"
@@ -199,7 +199,7 @@ Use the QR code entry directly in Blade without the Infolist class:
     qrBackgroundColor="FFFFFF"
 />
 
-<x-infolist::qr-code-entry
+<x-accelade::qr-code-entry
     label="Product SKU"
     value="ABC-12345"
     mode="barcode"

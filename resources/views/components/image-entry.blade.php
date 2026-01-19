@@ -34,6 +34,7 @@
         $stackLimit = $entry->getStackLimit();
         $remainingCount = $entry->getRemainingCount();
         $tooltip = $entry->getTooltip();
+        $tooltipConfig = $entry->getTooltipConfig();
         $url = $entry->getUrl();
         $shouldOpenUrlInNewTab = $entry->shouldOpenUrlInNewTab();
         $loadingAttr = $entry->getLoading();
@@ -53,6 +54,7 @@
         $usePicture = $picture;
         $pictureSources = $sources;
         $altText = $alt;
+        $tooltipConfig = $tooltip;
         $hasWrapper = false;
     }
 
@@ -106,7 +108,7 @@
 @endphp
 
 @if ($hasWrapper && $entry)
-    <x-infolists::entry-wrapper :entry="$entry">
+    <x-accelade::entry-wrapper :entry="$entry">
         @if (empty($images))
             <span style="color: var(--docs-text-muted, #64748b);">
                 {{ $placeholder }}
@@ -154,7 +156,7 @@
                                 src="{{ $imageUrl }}"
                                 alt="{{ $altText }}"
                                 loading="{{ $loadingAttr }}"
-                                @if ($tooltip) title="{{ $tooltip }}" @endif
+                                @if ($tooltipConfig) a-tooltip="{{ $tooltipConfig }}" @endif
                                 @if ($imgStyle) style="{{ $imgStyle }}" @endif
                                 @class($imageClasses)
                             />
@@ -164,7 +166,7 @@
                             src="{{ $imageUrl }}"
                             alt="{{ $altText }}"
                             loading="{{ $loadingAttr }}"
-                            @if ($tooltip) title="{{ $tooltip }}" @endif
+                            @if ($tooltipConfig) a-tooltip="{{ $tooltipConfig }}" @endif
                             @if ($imgStyle) style="{{ $imgStyle }}" @endif
                             @class($imageClasses)
                         />
@@ -200,7 +202,7 @@
                 @endif
             </div>
         @endif
-    </x-infolists::entry-wrapper>
+    </x-accelade::entry-wrapper>
 @else
     {{-- Standalone blade component usage --}}
     <div {{ $attributes->class(['accelade-entry']) }}>
@@ -253,7 +255,7 @@
                                     src="{{ $imageUrl }}"
                                     alt="{{ $altText }}"
                                     loading="{{ $loadingAttr }}"
-                                    @if ($tooltip) title="{{ $tooltip }}" @endif
+                                    @if ($tooltipConfig) a-tooltip="{{ $tooltipConfig }}" @endif
                                     @if ($imgStyle) style="{{ $imgStyle }}" @endif
                                     @class($imageClasses)
                                 />
@@ -263,7 +265,7 @@
                                 src="{{ $imageUrl }}"
                                 alt="{{ $altText }}"
                                 loading="{{ $loadingAttr }}"
-                                @if ($tooltip) title="{{ $tooltip }}" @endif
+                                @if ($tooltipConfig) a-tooltip="{{ $tooltipConfig }}" @endif
                                 @if ($imgStyle) style="{{ $imgStyle }}" @endif
                                 @class($imageClasses)
                             />
